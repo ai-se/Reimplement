@@ -8,17 +8,15 @@ def run_alg(filename):
     print filename,
     content = open(filename).readlines()[1:]
     N = len(content[0].split(",")) -1
-    # print N,
-    # return
     indexes = range(len(content))
 
-    for count in xrange(1, 20):
-        if count*N < 0.8 * len(content):
+    for count in xrange(1,10):
             mres = []
             for rep in xrange(30):
                 shuffle(indexes)
-                train_indexes = indexes[:count*N]
-                test_indexes = indexes[count*N:]
+                break_point = int(0.05 * count * len(content))
+                train_indexes = indexes[:break_point]
+                test_indexes = indexes[break_point:]
 
                 train_independent = []
                 train_dependent = []
@@ -49,12 +47,10 @@ def run_alg(filename):
                     if i == 0:
                         continue
 
-                    mre.append(abs(i - j)/i)
+                    mre.append(abs(i - j)/abs(i))
                 mres.append(np.mean(mre))
 
             print round(np.mean(mres)*100, 4),
-        else:
-            print "NA",
 
 
 if __name__ == "__main__":
