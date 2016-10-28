@@ -18,7 +18,7 @@ import types
 
 import os
 # print(os.getcwd())
-from utilities.Tools.axe.demos import *
+from Utilities.Tools.axe.demos import *
 from libWhere import *
 from nasa93 import *
 from settingsWhere  import *
