@@ -23,12 +23,12 @@ def experiment2(filename, ret_val):
 def experiment1(filename, normalize=None, feature_weights=False):
     if normalize is not None:
         name = filename.split('/')[-1]
-        filename = "./NData/MinMax/norm_" + name
+        norm_filename = "./NData/MinMax/norm_" + name
 
     mmre = []
     for _ in xrange(30):
         if feature_weights is True:
-            filename = add_feature_weights(filename)
+            filename = add_feature_weights(norm_filename)
         method = what(filename)
         training_data, testing_data = method.generate_test_data()
         assert(len(training_data[0]) == len(training_data[-1])), "Something is wrong"
