@@ -4,12 +4,12 @@ from Methods.guo_random import guo_random
 from Utilities.model import generate_model
 from Utilities.normalize import do_normalize_min_max, do_normalize_zscore
 import numpy as np
-import os
+import os, sys
 
 
 def experiment2(filename, ret_val):
     mmre = []
-    for _ in xrange(30):
+    for _ in xrange(10):
         method = guo_random(filename)
         training_data, testing_data = method.generate_test_data(ret_val)
         assert(len(training_data[0]) == len(training_data[-1])), "Something is wrong"
@@ -23,7 +23,9 @@ def experiment1(filename, normalize=None):
     if normalize is not None:
         filename = normalize(filename)
     mmre = []
-    for _ in xrange(30):
+    for _ in xrange(10):
+        print "# ",
+        sys.stdout.flush()
         method = what(filename)
         training_data, testing_data = method.generate_test_data()
         assert(len(training_data[0]) == len(training_data[-1])), "Something is wrong"
@@ -36,7 +38,7 @@ def experiment1(filename, normalize=None):
 if __name__ == "__main__":
     files = ["./Data/"+f for f in os.listdir("./Data/") if ".csv" in f]
     # files = ["./Data/sol-6d-c2-obj1.csv"]
-    files = ["./Data/BDBC_AllMeasurements.csv"]
+    # files = ["./Data/BDBC_AllMeasurements.csv"]
     for file in files:
         print file,
         # ret_val = experiment1(file, normalize=do_normalize_zscore)
