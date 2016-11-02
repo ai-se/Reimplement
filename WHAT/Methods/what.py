@@ -26,7 +26,7 @@ class what:
         """
         from Utilities.Tools.methods1 import wrapper_createTbl
         # The Data has to be access using this attribute table._rows.cells
-        transformed_table = [[int(z) for z in x.cells[:-1]] + x.cells[-1:] for x in wrapper_createTbl(self.temp_file_name)._rows]
+        transformed_table = [[z for z in x.cells[:-1]] + x.cells[-1:] for x in wrapper_createTbl(self.temp_file_name)._rows]
         cluster_numbers = set(map(lambda x: x[-1], transformed_table))
 
         # separating clusters
@@ -73,7 +73,6 @@ class what:
         clusters = []
         for raw_cluster in raw_clusters:
             clusters.append([item[:-1] for item in raw_cluster[-1]])
-
         selected_points = [choice(cluster) for cluster in clusters]
         return [[item[:-1] for item in selected_points], [item[-1] for item in selected_points]], [test_independent, test_dependent]
 

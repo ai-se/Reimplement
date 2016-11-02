@@ -82,7 +82,7 @@ class makeAModel(object):
 
     """ There's a bug in table.py that doesn't separate dependent and independent
       Variable. The following, badly written, piece of code corrects for it...
-  """
+    """
     for indx, k in enumerate(tbl.indep):
       for l in tbl.depen:
         if k.name == l.name:

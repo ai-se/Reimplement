@@ -36,8 +36,10 @@ def experiment1(filename, normalize=None):
 if __name__ == "__main__":
     files = ["./Data/"+f for f in os.listdir("./Data/") if ".csv" in f]
     # files = ["./Data/sol-6d-c2-obj1.csv"]
+    files = ["./Data/BDBC_AllMeasurements.csv"]
     for file in files:
         print file,
-        ret_val = experiment1(file, normalize=do_normalize_zscore)
+        # ret_val = experiment1(file, normalize=do_normalize_zscore)
+        ret_val = experiment1(file)
         experiment2(file, ret_val)
         print

@@ -1,12 +1,7 @@
 #! /Users/rkrsn/anaconda/bin/python
 from os import environ, getcwd, walk
 import sys
-# Update PYTHONPATH
-# HOME = environ['HOME']
-# axe = HOME + '/git/axe/axe/'  # AXE
-# pystat = HOME + '/git/pystats/'  # PySTAT
-# cwd = getcwd()  # Current Directory
-# sys.path.extend([axe, pystat, cwd])
+
 from axe.dtree import *
 from axe.table import *
 from _imports.where2 import *
@@ -61,6 +56,7 @@ def createTbl(
       m = makeaModel.csv2py(t, _smote=_smote, duplicate=duplicate)
       _r += m._rows
   m._rows = _r
+
   prepare(m, settings=None)  # Initialize all parameters for where2 to run
   # print("WHERE start")
 
@@ -73,11 +69,9 @@ def createTbl(
 
   headerLabel = '=klass'
   Rows = []
-  for k, _ in leaves(tree):  # for k, _ in leaves(tree):
+  for k, _ in leaves(tree):
       for j in k.val:
           tmp = j.cells
-          if isBin:
-              tmp[-1] = 0 if tmp[-1] < bugThres else 1
           tmp.append('_' + str(id(k)))
           j.__dict__.update({'cells': tmp})
           Rows.append(j.cells)

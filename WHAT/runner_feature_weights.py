@@ -31,6 +31,8 @@ def experiment1(filename, normalize=None, feature_weights=False):
             filename = add_feature_weights(norm_filename)
         method = what(filename)
         training_data, testing_data = method.generate_test_data()
+        import pdb
+        pdb.set_trace()
         assert(len(training_data[0]) == len(training_data[-1])), "Something is wrong"
         assert(len(testing_data[0]) == len(testing_data[-1])), "Something is wrong"
         mmre.append(generate_model(training_data, testing_data))
@@ -40,7 +42,9 @@ def experiment1(filename, normalize=None, feature_weights=False):
 
 if __name__ == "__main__":
     files = ["./Data/"+f for f in os.listdir("./Data/") if ".csv" in f]
-    # files = ["./Data/sol-6d-c2-obj1.csv"]
+    files = ["./Data/BDBC_AllMeasurements.csv"]
+    # import pdb
+    # pdb.set_trace()
     for file in files:
         print file,
         ret_val = experiment1(file, normalize=do_normalize_zscore, feature_weights=True)
