@@ -1,0 +1,4 @@
+./Data/Apache_AllMeasurements.csv #  #  #  #  #  #  #  #  #  #  11.996 3.801 11.544 4.057
+./Data/BDBC_AllMeasurements.csv #  #  #  #  #  #  #  #  #  #  7.626 3.73 7.025 2.888
+./Data/Dune.csv #  #  #  #  #  #  #  #  #  #  15.98 2.931 15.354 2.027
+./Data/Hipacc.csv # 

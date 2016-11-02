@@ -1,5 +1,5 @@
 from __future__ import division
-from random import shuffle, choice
+from random import shuffle, choice, randint
 from Utilities.performance_measure import *
 from Utilities.model import generate_model
 
@@ -7,34 +7,7 @@ from Utilities.model import generate_model
 class guo_random:
     def __init__(self, filename):
         self.filename = filename
-        self.temp_file_name = "temp_file.csv"
-
-    def temp_file_generation(self, header, listoflist):
-        import csv
-        with open(self.temp_file_name, 'wb') as fwrite:
-            writer = csv.writer(fwrite, delimiter=',')
-            writer.writerow(header)
-            for l in listoflist:
-                writer.writerow(l)
-        fwrite.close()
-
-    def where_clusterer(self):
-        """
-        This is function accepts a file with rows(=records) and clusters it. This is FASTNAP + PCA
-        :param filename: Pass in the filename with rows as valid configurations
-        :return: List of Cluster. Each cluster has a [[cluster_number], [list of members]]
-        """
-        from Utilities.Tools.methods1 import wrapper_createTbl
-        # The Data has to be access using this attribute table._rows.cells
-        transformed_table = [[int(z) for z in x.cells[:-1]] + x.cells[-1:] for x in wrapper_createTbl(self.temp_file_name)._rows]
-        cluster_numbers = set(map(lambda x: x[-1], transformed_table))
-
-        # separating clusters
-        # the element looks like [clusterno, rows]
-        cluster_table = []
-        for number in cluster_numbers:
-            cluster_table.append([number] + [filter(lambda x: x[-1] == number, transformed_table)])
-        return cluster_table
+        self.temp_file_name = "temp_file" + str(randint(1, 1000)) + ".csv"
 
     def generate_test_data(self, number):
         raw_content = open(self.filename, "r").readlines()

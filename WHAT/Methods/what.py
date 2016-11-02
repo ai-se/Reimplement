@@ -1,13 +1,14 @@
 from __future__ import division
-from random import shuffle, choice
+from random import shuffle, choice, randint
 from Utilities.performance_measure import *
 from Utilities.model import generate_model
+from os import remove
 
 
 class what:
     def __init__(self, filename):
         self.filename = filename
-        self.temp_file_name = "temp_file.csv"
+        self.temp_file_name = "temp_file" + str(randint(1, 100)) + ".csv"
 
     def temp_file_generation(self, header, listoflist):
         import csv
@@ -74,6 +75,7 @@ class what:
         for raw_cluster in raw_clusters:
             clusters.append([item[:-1] for item in raw_cluster[-1]])
         selected_points = [choice(cluster) for cluster in clusters]
+        remove(self.temp_file_name)
         return [[item[:-1] for item in selected_points], [item[-1] for item in selected_points]], [test_independent, test_dependent]
 
 

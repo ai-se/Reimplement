@@ -9,7 +9,7 @@ import os, sys
 
 def experiment2(filename, ret_val):
     mmre = []
-    for _ in xrange(10):
+    for _ in xrange(30):
         method = guo_random(filename)
         training_data, testing_data = method.generate_test_data(ret_val)
         assert(len(training_data[0]) == len(training_data[-1])), "Something is wrong"
@@ -23,7 +23,7 @@ def experiment1(filename, normalize=None):
     if normalize is not None:
         filename = normalize(filename)
     mmre = []
-    for _ in xrange(10):
+    for _ in xrange(30):
         print "# ",
         sys.stdout.flush()
         method = what(filename)
@@ -41,7 +41,7 @@ if __name__ == "__main__":
     # files = ["./Data/BDBC_AllMeasurements.csv"]
     for file in files:
         print file,
-        ret_val = experiment1(file, normalize=do_normalize_min_max)
+        ret_val = experiment1(file, normalize=do_normalize_zscore)
         # ret_val = experiment1(file)
         experiment2(file, ret_val)
         print
