@@ -11,6 +11,10 @@ def generate_model(training_data, testing_data, performance_measure=mmre):
 
     from sklearn.tree import DecisionTreeRegressor
     model = DecisionTreeRegressor()
-    model.fit(training_independent, training_dependent)
+    try:
+        model.fit(training_independent, training_dependent)
+    except:
+        import pdb
+        pdb.set_trace()
     predicted = model.predict(testing_independent)
     return performance_measure(predicted, testing_dependent)

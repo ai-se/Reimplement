@@ -17,6 +17,7 @@ def add_feature_weights(filename, sampling_percent=10):
     model = DecisionTreeRegressor()
     model.fit(rows[indep_col], rows[dep_col])
     importance = [c*100 for c in list(model.feature_importances_)]
+    # print importance
 
     indep_content = content[indep_col]
     dep_content = content[dep_col]
