@@ -96,9 +96,8 @@ def experiment1(filename, normalize=None, feature_weights=False, dist=1.5, no_of
     return mmre, evals
 
 if __name__ == "__main__":
-    files = ["./Data/"+f for f in os.listdir("./Data/") if ".csv" in f]
-    import pdb
-    pdb.set_trace()
+    files = ['./Data/Apache_AllMeasurements.csv', './Data/BDBC_AllMeasurements.csv', './Data/Dune.csv', './Data/Hipacc.csv', ]
+
     results = {}
     for file in files:
         results[file] = {}
@@ -112,4 +111,4 @@ if __name__ == "__main__":
             results[file][str(dist)]["al_mmre"] = al_mmre
             results[file][str(dist)]["al_evals"] = al_evals
             results[file][str(dist)]["random_mmre"] = random_mmre
-    pickle.dump(results, open("/Users/viveknair/GIT/Reimplement/WHAT/progressive_sampling/data/save.p", "wb"))
+    pickle.dump(results, open("/Users/viveknair/GIT/Reimplement/WHAT/progressive_sampling/data/save1.p", "wb"))
