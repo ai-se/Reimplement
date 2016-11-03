@@ -52,6 +52,7 @@ def add_feature_weights(filename, sampling_percent=10):
 
         chosen_indices = []
         remaining_indices = range(content.shape[0])
+        random.shuffle(remaining_indices)
 
         while True:
             chosen_index = random.randint(0, len(remaining_indices)-1)
@@ -66,7 +67,7 @@ def add_feature_weights(filename, sampling_percent=10):
             remaining_indices.pop(chosen_index)
 
             assert(len(chosen_indices) + len(remaining_indices) == len(content)), "Something is wrong"
-            if check_condition(freq_table) is True: break
+            if check_condition(freq_table) is True or len(chosen_indices) > 0.1 * len(content): break
         return content.ix[chosen_indices]
 
     name = filename.split('/')[-1]
@@ -78,7 +79,14 @@ def add_feature_weights(filename, sampling_percent=10):
     model = DecisionTreeRegressor()
     model.fit(rows[indep_col], rows[dep_col])
     importance = [c*100 for c in list(model.feature_importances_)]
-    # print importance
+    # adding importance
+    assert(len(importance) == len(indep_col)), "something is wrong"
+    for index,col in enumerate(indep_col):
+        col_f = "##" + col
+        rows[col_f] = (rows[col] * importance[index])
+    norm_cols = [c for c in rows.columns if "##" in c]
+    new_rows = rows[norm_cols]
+    new_rows.columns = indep_col
 
     indep_content = content[indep_col]
     dep_content = content[dep_col]
@@ -92,4 +100,4 @@ def add_feature_weights(filename, sampling_percent=10):
     indep_f.columns = indep_col
     new_df = pd.concat([indep_f, dep_content], axis=1)
     new_df.to_csv("./FData/norm_" + name, index=False)
-    return "./FData/norm_" + name
+    return "./FData/norm_" + name , [new_rows.values.tolist(), rows[dep_col[-1]].tolist()]
