@@ -42,8 +42,8 @@ def experiment1(filename, normalize=None, feature_weights=False):
     return len(new_training_data[0])
 
 if __name__ == "__main__":
-    # files = ["./Data/"+f for f in os.listdir("./Data/") if ".csv" in f]
-    files = ["./Data/wc-6d-c1-obj2.csv"]
+    files = ["./Data/"+f for f in os.listdir("./Data/") if ".csv" in f]
+    # files = ["./Data/wc-6d-c1-obj2.csv"]
     # import pdb
     # pdb.set_trace()
     for file in files:
