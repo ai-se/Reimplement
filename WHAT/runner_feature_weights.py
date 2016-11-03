@@ -12,7 +12,7 @@ from sklearn.tree import DecisionTreeRegressor
 
 def experiment2(filename, ret_val):
     mmre = []
-    for _ in xrange(30):
+    for _ in xrange(10):
         method = guo_random(filename)
         training_data, testing_data = method.generate_test_data(ret_val)
         assert(len(training_data[0]) == len(training_data[-1])), "Something is wrong"
@@ -33,8 +33,7 @@ def experiment1(filename, normalize=None, feature_weights=False, no_of_trees=20,
     for _ in xrange(10):
         # print ". ",
         # sys.stdout.flush()
-        if feature_weights is True:
-            filename, extra_evals = add_feature_weights(norm_filename)
+        _, extra_evals = add_feature_weights(norm_filename)
         trains.append(len(extra_evals[0]))
         # build bagging trees
         trees = [DecisionTreeRegressor() for _ in xrange(no_of_trees)]
@@ -91,17 +90,23 @@ def experiment1(filename, normalize=None, feature_weights=False, no_of_trees=20,
                 mre.append(abs(actual - predict)/abs(actual))
         mmre.append(np.mean(mre) * 100)
         evals.append(len(cal_indep_train))
-    print dist, round(np.mean(mmre), 2), round(np.std(mmre), 2), round(np.mean(evals), 2), round(np.std(evals),3)
-
+    print round(np.mean(mmre), 2), round(np.std(mmre), 2), #, round(np.mean(evals), 2), round(np.std(evals),3)
+    return int(np.mean(evals))
 
 if __name__ == "__main__":
     files = ["./Data/"+f for f in os.listdir("./Data/") if ".csv" in f]
     # files = ["./Data/Apache_AllMeasurements.csv"]
     # import pdb
     # pdb.set_trace()
+    # for file in files:
+    #     print file
+    #     dists = [0.05 * i for i in xrange(1, 20)]
+    #     for dist in dists:
+    #         experiment1(file, normalize=do_normalize_zscore, feature_weights=True, dist=dist)
+    #     print
+
     for file in files:
-        print file
-        dists = [0.05 * i for i in xrange(1, 20)]
-        for dist in dists:
-            experiment1(file, normalize=do_normalize_zscore, feature_weights=True, dist=dist)
+        print file,
+        ret = experiment1(file, dist=0.4)
+        experiment2(file, ret)
         print

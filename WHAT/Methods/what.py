@@ -8,7 +8,7 @@ from os import remove
 class what:
     def __init__(self, filename):
         self.filename = filename
-        self.temp_file_name = "temp_file" + str(randint(1, 100)) + ".csv"
+        self.temp_file_name = "temp_file" + str(randint(1, 1000)) + ".csv"
 
     def temp_file_generation(self, header, listoflist):
         import csv
