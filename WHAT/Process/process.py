@@ -1,36 +1,34 @@
 from __future__ import division
-import pandas as pd
+import pickle
 import matplotlib.pyplot as plt
 
-file = "./active_learning.txt"
 
-content = open(file).readlines()
-dict = {}
-for line in content:
-    if "./Data" in line:
-        name = line.strip().split('/')[-1].split('.')[0]
-        dict[name] = []
-    elif line != '\n':
-        dict[name].append(map(float, line.strip().split(' ')))
+result = pickle.load(open("save.p", "rb"))
+files = result.keys()
+for file in files:
+    vals = sorted(result[file].keys())
+    mmres = [result[file][val]['mmre'] for val in vals]
+    top_ranks = [result[file][val]['min_rank'] for val in vals]
 
-for key in dict.keys():
-    df =pd.DataFrame(dict[key])
-    df.columns = ['measure', 'mmre', 'stdmre', 'meanEvals', 'stdEvals']
     fig, ax1 = plt.subplots()
-    ax1.plot(df['measure'], df['mmre'], 'b-')
-    ax1.set_xlabel('Measure')
+    ax1.plot(vals, mmres, 'b-')
+    ax1.set_xlabel('Size of training set')
     ax1.set_ylabel('MMRE', color='b')
+    ax1.set_ylim(0, 20)
     for tl in ax1.get_yticklabels():
         tl.set_color('b')
 
     ax2 = ax1.twinx()
-    ax2.plot(df['measure'], df['meanEvals'], 'r')
-    ax2.set_ylabel('Evals', color='r')
+    ax2.plot(vals, top_ranks, 'r')
+    ax2.set_ylabel('Minimum Rank Found', color='r')
+    ax2.set_ylim(0, 20)
     for tl in ax2.get_yticklabels():
         tl.set_color('r')
 
-    plt.suptitle(key)
-    plt.savefig("./Figs/" + key)
+    plt.suptitle(file.split('/')[-1].split('.')[0])
+    plt.savefig("./Figs/" + file.split('/')[-1].split('.')[0])
+    plt.cla()
+    plt.close()
 
     # import pdb
     # pdb.set_trace()

@@ -16,7 +16,7 @@ class guo_random:
         indexes = range(len(content))
         shuffle(indexes)
 
-        breakpoint = int(0.4 * len(content))
+        breakpoint = int(0.5 * len(content))
 
         train_indexes = indexes[:breakpoint]
         test_indexes = indexes[breakpoint:]

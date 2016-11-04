@@ -13,8 +13,6 @@ def generate_model(training_data, testing_data, performance_measure=mmre):
     model = DecisionTreeRegressor()
     # try:
     model.fit(training_independent, training_dependent)
-    # except:
-    #     import pdb
-    #     pdb.set_trace()
+
     predicted = model.predict(testing_independent)
-    return performance_measure(predicted, testing_dependent)
+    return model, performance_measure(predicted, testing_dependent)
