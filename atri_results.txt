@@ -1,0 +1,243 @@
+System-id : Apache.csv
+
+Detailed learning projections:
+<curve-id> : {<details>}
+
+weiss:{'standard deviation': 2.5004848059518148, 'accuracy': 91.635970524541435, 'optimal sample size': 45, 'correlation': -0.89955647072765288}
+exp:{'standard deviation': 0.86570673103644791, 'accuracy': 92.242090048286954, 'optimal sample size': 55, 'correlation': -0.98504083645287066}
+power:{'standard deviation': 4.5897265070608304, 'accuracy': 89.21375527351455, 'optimal sample size': 21, 'correlation': -0.92550488784549967}
+log:{'standard deviation': None, 'accuracy': None, 'optimal sample size': 670, 'correlation': -0.95988280889853328}
+-----------------------------------------------
+>>>>  Apache_AllMeasurements.csv 45
+System-id : BDBC.csv
+
+Detailed learning projections:
+<curve-id> : {<details>}
+
+weiss:{'standard deviation': 0.019498764012050241, 'accuracy': 99.571552621296306, 'optimal sample size': 979, 'correlation': -0.94718442138405734}
+exp:{'standard deviation': 1.0269742041032084, 'accuracy': 98.60585806463024, 'optimal sample size': 203, 'correlation': -0.93290585243506674}
+power:{'standard deviation': 0.97735037433113303, 'accuracy': 98.527730612681097, 'optimal sample size': 172, 'correlation': -0.94684050482819682}
+log:{'standard deviation': None, 'accuracy': None, 'optimal sample size': 217778, 'correlation': -0.96743774688355511}
+-----------------------------------------------
+>>>>  BDBC_AllMeasurements.csv 203
+System-id : Dune.csv
+
+Detailed learning projections:
+<curve-id> : {<details>}
+
+weiss:{'standard deviation': 1.8588637125528888, 'accuracy': 89.379384237928932, 'optimal sample size': 132, 'correlation': -0.89986096127864013}
+exp:{'standard deviation': 0.69907449296215751, 'accuracy': 92.238488145825528, 'optimal sample size': 439, 'correlation': -0.93712496153459812}
+power:{'standard deviation': 1.9132656512137269, 'accuracy': 89.16210960471129, 'optimal sample size': 131, 'correlation': -0.97002287290655254}
+log:{'standard deviation': None, 'accuracy': None, 'optimal sample size': 3326, 'correlation': -0.97721677817073926}
+-----------------------------------------------
+>>>>  Dune.csv 132
+System-id : HSMGP_num.csv
+
+Detailed learning projections:
+<curve-id> : {<details>}
+
+weiss:{'standard deviation': 0.52515749967713776, 'accuracy': 89.518425454137898, 'optimal sample size': 461, 'correlation': -0.97398071733733949}
+exp:{'standard deviation': 0.63566431025839154, 'accuracy': 88.937723076699982, 'optimal sample size': 402, 'correlation': -0.83641868888945226}
+power:{'standard deviation': 1.2626637321575529, 'accuracy': 85.586831524999084, 'optimal sample size': 215, 'correlation': -0.96412892307256803}
+log:{'standard deviation': None, 'accuracy': None, 'optimal sample size': 36150, 'correlation': -0.9359806910695827}
+-----------------------------------------------
+>>>>  HSMGP_num.csv 402
+System-id : rs-6d-c3_obj1.csv
+
+Detailed learning projections:
+<curve-id> : {<details>}
+
+weiss:{'standard deviation': None, 'accuracy': None, 'optimal sample size': 2636, 'correlation': -0.98034114838487052}
+exp:{'standard deviation': 36.656016431117791, 'accuracy': 65.150623602155846, 'optimal sample size': 452, 'correlation': -0.73422889690893767}
+power:{'standard deviation': 34.110267090890702, 'accuracy': 59.198840272096035, 'optimal sample size': 379, 'correlation': -0.90701809431242508}
+log:{'standard deviation': None, 'accuracy': None, 'optimal sample size': 1088649, 'correlation': -0.86366595995590567}
+-----------------------------------------------
+>>>>  rs-6d-c3_obj1.csv 452
+System-id : rs-6d-c3_obj2.csv
+
+Detailed learning projections:
+<curve-id> : {<details>}
+
+weiss:{'standard deviation': None, 'accuracy': None, 'optimal sample size': 4204, 'correlation': -0.81954914310391813}
+exp:{'standard deviation': 23.71124055037269, 'accuracy': 72.727094900914338, 'optimal sample size': 808, 'correlation': -0.64855778957998389}
+power:{'standard deviation': 6.721239622976837, 'accuracy': 84.926040172963056, 'optimal sample size': 1192, 'correlation': -0.76308769264453835}
+log:{'standard deviation': None, 'accuracy': None, 'optimal sample size': 3049897, 'correlation': -0.79555490408169172}
+-----------------------------------------------
+>>>>  rs-6d-c3_obj2.csv 808
+System-id : sol-6d-c2-obj1.csv
+
+Detailed learning projections:
+<curve-id> : {<details>}
+
+weiss:{'standard deviation': None, 'accuracy': None, 'optimal sample size': 2000, 'correlation': -0.77978241482375565}
+exp:{'standard deviation': 24.345839925169944, 'accuracy': 47.540615892925736, 'optimal sample size': 164, 'correlation': -0.96068259515976784}
+power:{'standard deviation': 115.1663515630301, 'accuracy': 8.0568009321852649, 'optimal sample size': 105, 'correlation': -0.89967388471132315}
+log:{'standard deviation': None, 'accuracy': None, 'optimal sample size': 904664, 'correlation': -0.88063320039941484}
+-----------------------------------------------
+>>>>  sol-6d-c2-obj1.csv 105
+System-id : sol-6d-c2-obj2.csv
+
+Detailed learning projections:
+<curve-id> : {<details>}
+
+weiss:{'standard deviation': None, 'accuracy': None, 'optimal sample size': 5024, 'correlation': -0.93393611772782925}
+exp:{'standard deviation': 80.048605507766879, 'accuracy': -13.68366934868626, 'optimal sample size': 323, 'correlation': -0.86422264773380786}
+power:{'standard deviation': 36.288668484887452, 'accuracy': 11.186768843618662, 'optimal sample size': 432, 'correlation': -0.93652543829964785}
+log:{'standard deviation': None, 'accuracy': None, 'optimal sample size': 5000026, 'correlation': -0.89494337229303045}
+-----------------------------------------------
+>>>>  sol-6d-c2-obj2.csv 323
+System-id : sort_256_obj2.csv
+
+Detailed learning projections:
+<curve-id> : {<details>}
+
+weiss:{'standard deviation': 2.5326883550583292, 'accuracy': 88.825041746605095, 'optimal sample size': 45, 'correlation': -0.90124646601814007}
+exp:{'standard deviation': None, 'accuracy': None, 'optimal sample size': -386, 'correlation': -0.80372158358099066}
+power:{'standard deviation': 4.0132735097815919, 'accuracy': 85.897925813621853, 'optimal sample size': 18, 'correlation': -0.90810565704337731}
+log:{'standard deviation': None, 'accuracy': None, 'optimal sample size': 282, 'correlation': -0.93399422482838101}
+-----------------------------------------------
+>>>>  sort_256_obj2.csv 45
+System-id : SQL.csv
+
+Detailed learning projections:
+<curve-id> : {<details>}
+
+weiss:{'standard deviation': 0.51974371969250255, 'accuracy': 95.291800434607538, 'optimal sample size': 48, 'correlation': -0.58036836281137383}
+exp:{'standard deviation': 0.15732359304843488, 'accuracy': 96.141410630034798, 'optimal sample size': 573, 'correlation': -0.75863850735422445}
+power:{'standard deviation': 0.4595488287070052, 'accuracy': 95.493747739828819, 'optimal sample size': 81, 'correlation': -0.76481048740061297}
+log:{'standard deviation': 0.14490284182947971, 'accuracy': 96.133802666907513, 'optimal sample size': 588, 'correlation': -0.76447346494024382}
+-----------------------------------------------
+>>>>  SQL_AllMeasurements.csv 48
+System-id : wc+rs-3d-c4-obj1.csv
+
+Detailed learning projections:
+<curve-id> : {<details>}
+
+weiss:{'standard deviation': None, 'accuracy': None, 'optimal sample size': 103, 'correlation': -0.95829169774483214}
+exp:{'standard deviation': 11.200914080301123, 'accuracy': 69.881650503315967, 'optimal sample size': 76, 'correlation': -0.86755756642254878}
+power:{'standard deviation': 10.93409120858013, 'accuracy': 66.828078963162781, 'optimal sample size': 29, 'correlation': -0.97099466522595934}
+log:{'standard deviation': None, 'accuracy': None, 'optimal sample size': 1977, 'correlation': -0.96166409588038526}
+-----------------------------------------------
+>>>>  wc+rs-3d-c4-obj1.csv 76
+System-id : wc+rs-3d-c4-obj2.csv
+
+Detailed learning projections:
+<curve-id> : {<details>}
+
+weiss:{'standard deviation': None, 'accuracy': None, 'optimal sample size': 3575, 'correlation': -0.94929047943192646}
+exp:{'standard deviation': None, 'accuracy': None, 'optimal sample size': 122, 'correlation': -0.91946619972346344}
+power:{'standard deviation': 6520.6841323664039, 'accuracy': -1875.0070802571552, 'optimal sample size': 38, 'correlation': -0.91725121043055247}
+log:{'standard deviation': None, 'accuracy': None, 'optimal sample size': 1986608, 'correlation': -0.80926224564730886}
+-----------------------------------------------
+>>>>  wc+rs-3d-c4-obj2.csv 38
+System-id : wc+sol-3d-c4-obj1.csv
+
+Detailed learning projections:
+<curve-id> : {<details>}
+
+weiss:{'standard deviation': None, 'accuracy': None, 'optimal sample size': 103, 'correlation': -0.96683070537907123}
+exp:{'standard deviation': 11.046366419842995, 'accuracy': 68.237213165368601, 'optimal sample size': 75, 'correlation': -0.86672670395053897}
+power:{'standard deviation': 11.670336553993298, 'accuracy': 66.534409124616872, 'optimal sample size': 29, 'correlation': -0.97365455656674582}
+log:{'standard deviation': None, 'accuracy': None, 'optimal sample size': 1935, 'correlation': -0.9621396458915954}
+-----------------------------------------------
+>>>>  wc+sol-3d-c4-obj1.csv 75
+System-id : wc+sol-3d-c4-obj2.csv
+
+Detailed learning projections:
+<curve-id> : {<details>}
+
+weiss:{'standard deviation': None, 'accuracy': None, 'optimal sample size': 3427, 'correlation': -0.96442659095031791}
+exp:{'standard deviation': None, 'accuracy': None, 'optimal sample size': 112, 'correlation': -0.95739138847419991}
+power:{'standard deviation': 21375.149667462116, 'accuracy': -5477.4424236319965, 'optimal sample size': 33, 'correlation': -0.93093552953717906}
+log:{'standard deviation': None, 'accuracy': None, 'optimal sample size': 1856244, 'correlation': -0.83594953723559207}
+-----------------------------------------------
+>>>>  wc+sol-3d-c4-obj2.csv 33
+System-id : wc+wc-3d-c4-obj1.csv
+
+Detailed learning projections:
+<curve-id> : {<details>}
+
+weiss:{'standard deviation': None, 'accuracy': None, 'optimal sample size': 101, 'correlation': -0.95839769328554714}
+exp:{'standard deviation': 9.3640044214319875, 'accuracy': 73.190813763672168, 'optimal sample size': 74, 'correlation': -0.86575406761260387}
+power:{'standard deviation': 11.791013960470895, 'accuracy': 64.888073595158559, 'optimal sample size': 29, 'correlation': -0.968355110928663}
+log:{'standard deviation': None, 'accuracy': None, 'optimal sample size': 1888, 'correlation': -0.95979136903742557}
+-----------------------------------------------
+>>>>  wc+wc-3d-c4-obj1.csv 74
+System-id : wc+wc-3d-c4-obj2.csv
+
+Detailed learning projections:
+<curve-id> : {<details>}
+
+weiss:{'standard deviation': None, 'accuracy': None, 'optimal sample size': 3309, 'correlation': -0.95277544015410731}
+exp:{'standard deviation': None, 'accuracy': None, 'optimal sample size': 112, 'correlation': -0.95538851563434013}
+power:{'standard deviation': 14180.175059379417, 'accuracy': -4082.4113136429028, 'optimal sample size': 34, 'correlation': -0.90338457953374207}
+log:{'standard deviation': None, 'accuracy': None, 'optimal sample size': 1728586, 'correlation': -0.82489658221346596}
+-----------------------------------------------
+>>>>  wc+wc-3d-c4-obj2.csv 34
+System-id : wc-3d-c4_obj2.csv
+
+Detailed learning projections:
+<curve-id> : {<details>}
+
+weiss:{'standard deviation': None, 'accuracy': None, 'optimal sample size': 5784, 'correlation': -0.94125442095594314}
+exp:{'standard deviation': 22.780239873727904, 'accuracy': 56.539363249507211, 'optimal sample size': 315, 'correlation': -0.90579154060468103}
+power:{'standard deviation': 1429.7696374871341, 'accuracy': -482.74464965535793, 'optimal sample size': 84, 'correlation': -0.79777316693307676}
+log:{'standard deviation': None, 'accuracy': None, 'optimal sample size': 3668290, 'correlation': -0.89286210932989563}
+-----------------------------------------------
+>>>>  wc-3d-c4_obj2.csv 84
+System-id : wc-6d-c1-obj1.csv
+
+Detailed learning projections:
+<curve-id> : {<details>}
+
+weiss:{'standard deviation': 1.1246364638223634, 'accuracy': 91.492109328055435, 'optimal sample size': 706, 'correlation': -0.87121102987978749}
+exp:{'standard deviation': 4.5361062778797212, 'accuracy': 85.335919883247882, 'optimal sample size': 345, 'correlation': -0.93018180108050941}
+power:{'standard deviation': 4.4043407275017881, 'accuracy': 82.983348410893072, 'optimal sample size': 283, 'correlation': -0.94868473131102526}
+log:{'standard deviation': None, 'accuracy': None, 'optimal sample size': 107692, 'correlation': -0.93992553547796565}
+-----------------------------------------------
+>>>>  wc-6d-c1-obj1.csv 706
+System-id : wc-6d-c1-obj2.csv
+
+Detailed learning projections:
+<curve-id> : {<details>}
+
+weiss:{'standard deviation': None, 'accuracy': None, 'optimal sample size': 6642, 'correlation': -0.92330933781017288}
+exp:{'standard deviation': 15.505289070242307, 'accuracy': 74.926407456638287, 'optimal sample size': 124, 'correlation': -0.94925283899695523}
+power:{'standard deviation': 26.012443829118887, 'accuracy': 20.367737347318045, 'optimal sample size': 51, 'correlation': -0.96340872260287125}
+log:{'standard deviation': None, 'accuracy': None, 'optimal sample size': 7375966, 'correlation': -0.77110523981793755}
+-----------------------------------------------
+>>>>  wc-6d-c1-obj2.csv 124
+System-id : WGet.csv
+
+Detailed learning projections:
+<curve-id> : {<details>}
+
+weiss:{'standard deviation': 6.8079699779190106, 'accuracy': 93.271186266399127, 'optimal sample size': 77, 'correlation': -0.92523489016508764}
+exp:{'standard deviation': 13.098751671317546, 'accuracy': 82.739707926890034, 'optimal sample size': 18, 'correlation': -0.87309196199927241}
+power:{'standard deviation': 13.369478324480017, 'accuracy': 86.026522063340579, 'optimal sample size': 21, 'correlation': -0.95954607280574211}
+log:{'standard deviation': None, 'accuracy': None, 'optimal sample size': 872, 'correlation': -0.95208868698124038}
+-----------------------------------------------
+>>>>  WGet.csv 18
+System-id : X264_AllMeasurements.csv
+
+Detailed learning projections:
+<curve-id> : {<details>}
+
+weiss:{'standard deviation': 0.18934557641210661, 'accuracy': 99.050329289407657, 'optimal sample size': 159, 'correlation': -0.95638092248495743}
+exp:{'standard deviation': 0.5688687567430496, 'accuracy': 93.753183944586254, 'optimal sample size': 93, 'correlation': -0.98508431778580186}
+power:{'standard deviation': 1.0008322128324003, 'accuracy': 92.822118322533157, 'optimal sample size': 55, 'correlation': -0.97304406757327089}
+log:{'standard deviation': None, 'accuracy': None, 'optimal sample size': 7354, 'correlation': -0.99053251531158071}
+-----------------------------------------------
+>>>>  X264_AllMeasurements.csv 159
+
+System-id : lrzip.csv
+
+Detailed learning projections:
+<curve-id> : {<details>}
+
+weiss:{'standard deviation': None, 'accuracy': None, 'optimal sample size': 415, 'correlation': -0.97955236809362622}
+exp:{'standard deviation': 3.6338219137083341, 'accuracy': 91.813829053754858, 'optimal sample size': 168, 'correlation': -0.88668013123776546}
+power:{'standard deviation': 30.868464808681576, 'accuracy': 54.231845606187932, 'optimal sample size': 50, 'correlation': -0.97956025905705857}
+log:{'standard deviation': None, 'accuracy': None, 'optimal sample size': 26332, 'correlation': -0.91053582141435196}
+-----------------------------------------------
+>>>>  lrzip.csv 168

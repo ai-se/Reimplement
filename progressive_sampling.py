@@ -127,6 +127,7 @@ def find_lowest_rank(train, test, bracket=10):
     model = DecisionTreeRegressor()
     model.fit(train_independent, train_dependent)
     predicted = model.predict(test_independent)
+
     predicted_id = [[i, p] for i, p in enumerate(predicted)]
     predicted_sorted = sorted(predicted_id, key=lambda x: x[-1])
     # assigning predicted ranks
