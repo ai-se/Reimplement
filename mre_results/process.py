@@ -3,7 +3,7 @@ import pickle
 import numpy as np
 import matplotlib.pyplot as plt
 
-dict_results = pickle.load(open("mre_results.p", "r"))
+dict_results = pickle.load(open("mre_results_rank.p", "r"))
 files = dict_results.keys()
 for file in files:
     print file
@@ -11,25 +11,37 @@ for file in files:
     dumb_mres = []
     dumb_stds = []
     dumb_evals = []
+    dumb_ranks = []
+
+
     random_mres = []
     random_stds = []
     random_evals = []
+    random_ranks = []
+
     fractions = sorted(dict_results[file].keys())
     for fraction in fractions:
         algorithms = dict_results[file][fraction].keys()
         dumb_mres.append(np.mean(dict_results[file][fraction]['dumb']['mres'])*100)
         dumb_stds.append(np.std(dict_results[file][fraction]['dumb']['mres'])*100)
+
         random_mres.append(np.mean(dict_results[file][fraction]['random-progressive']['mres'])*100)
         random_stds.append(np.std(dict_results[file][fraction]['random-progressive']['mres'])*100)
-        dumb_evals.append(np.mean(dict_results[file][fraction]['dumb']['train_set_size']))
-        random_evals.append(np.mean(dict_results[file][fraction]['random-progressive']['train_set_size']))
+
+        dumb_evals.append(np.median(dict_results[file][fraction]['dumb']['train_set_size']))
+        random_evals.append(np.median(dict_results[file][fraction]['random-progressive']['train_set_size']))
+
+        dumb_ranks.append(np.median(dict_results[file][fraction]['dumb']['min_rank']))
+        random_ranks.append(np.median(dict_results[file][fraction]['random-progressive']['min_rank']))
+
+
 
     left, width = .53, .5
     bottom, height = .25, .5
     right = left + width
     top = bottom + height
 
-    f, (ax1, ax2, ax3) = plt.subplots(3, 1)
+    f, (ax1, ax2, ax3, ax4) = plt.subplots(4, 1)
     ax1.plot(fractions, dumb_mres, 'ko-', color='r')
     ax1.plot(fractions, random_mres, 'kx-', color='g')
     ax1.set_xlim(0,)
@@ -46,11 +58,17 @@ for file in files:
         ax2.set_yscale('log')
     ax2.set_ylabel("STDS")
 
-
-    ax3.plot(fractions, dumb_evals, 'ko-', color='r')
-    ax3.plot(fractions, random_evals, 'kx-', color='g')
+    ax3.plot(fractions, dumb_ranks, 'ko-', color='r')
+    ax3.plot(fractions, random_ranks, 'kx-', color='g')
     ax3.set_xlim(0, )
-    ax3.set_ylabel("Evaluations")
+    ax3.set_ylabel("Min Ranks")
+
+
+
+    ax4.plot(fractions, dumb_evals, 'ko-', color='r')
+    ax4.plot(fractions, random_evals, 'kx-', color='g')
+    ax4.set_xlim(0, )
+    ax4.set_ylabel("Evaluations")
 
     plt.figlegend([ax1.lines[0], ax1.lines[1]],
                   ["Dumb", "Random-Progressive"], frameon=True, loc='lower center',
@@ -61,4 +79,4 @@ for file in files:
     plt.ylim(0,)
 
     plt.legend(loc='best')
-    plt.savefig('./figures/'+filename+".png", bbox_inches='tight', format='png')
+    plt.savefig('./figs/'+filename+".png", bbox_inches='tight', format='png')

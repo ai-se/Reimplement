@@ -105,10 +105,10 @@ def wrapper_mre_progressive(train_set, validation_set, threshold=0.1):
     shuffle(training_indexes)
     sub_train_set = [train_set[i] for i in training_indexes[:initial_size]]
     steps = 0
-    while (initial_size+steps) < len(train_set) - 1:
+    while (initial_size+steps) < len(train_set) - 3:
         mre_returned = mre_progressive(sub_train_set, validation_set)
         if mre_returned < threshold: break
-        steps += 1
+        steps += 2
         sub_train_set.append(train_set[initial_size+steps])
 
     return sub_train_set
@@ -156,8 +156,8 @@ def find_mre(train, test):
 
 if __name__ == "__main__":
     datafolder = "./Data/"
-    # files = [datafolder + f for f in listdir(datafolder)]
-    files = ["./Data/wc+wc-3d-c4-obj2.csv", "./Data/SQL_AllMeasurements.csv", "./Data/sol-6d-c2-obj1.csv"]
+    files = [datafolder + f for f in listdir(datafolder)]
+    # files = ["./Data/wc+wc-3d-c4-obj2.csv", "./Data/SQL_AllMeasurements.csv", "./Data/sol-6d-c2-obj1.csv"]
     fractions = [0.1 * i for i in xrange(1, 8)]
     results = {}
     for file in files:
@@ -171,8 +171,11 @@ if __name__ == "__main__":
             results[file][fraction]["random-progressive"] = {}
             results[file][fraction]["dumb"]["mres"] = []
             results[file][fraction]["dumb"]["train_set_size"] = []
+            results[file][fraction]["dumb"]["min_rank"] = []
+
             results[file][fraction]["random-progressive"]["mres"] = []
             results[file][fraction]["random-progressive"]["train_set_size"] = []
+            results[file][fraction]["random-progressive"]["min_rank"] = []
 
             mres = []
             sizes = []
@@ -185,18 +188,22 @@ if __name__ == "__main__":
                 validation_set = datasets[1]
                 test_set = datasets[2]
                 sub_train_set_rank = wrapper_rank_progressive(train_set, validation_set)
+                lowest_rank = find_lowest_rank(sub_train_set_rank, test_set)
                 mre = find_mre(sub_train_set_rank, test_set)
                 results[file][fraction]["dumb"]["mres"].append(mre)
                 results[file][fraction]["dumb"]["train_set_size"].append(len(sub_train_set_rank))
+                results[file][fraction]["dumb"]["min_rank"].append(min(lowest_rank))
 
                 sub_train_set_rank = wrapper_mre_progressive(train_set, validation_set)
                 mre = find_mre(sub_train_set_rank, test_set)
+                lowest_rank = find_lowest_rank(sub_train_set_rank, test_set)
                 results[file][fraction]["random-progressive"]["mres"].append(mre)
                 results[file][fraction]["random-progressive"]["train_set_size"].append(len(sub_train_set_rank))
-                print len(sub_train_set_rank),
+                results[file][fraction]["random-progressive"]["min_rank"].append(min(lowest_rank))
             print
+
     import pickle
-    pickle.dump(results, open('mre_results.p', 'w'))
+    pickle.dump(results, open('mre_results_rank.p', 'w'))
 
 
 
