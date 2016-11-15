@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt
 dict_results = pickle.load(open("mre_results.p", "r"))
 files = dict_results.keys()
 for file in files:
+    print file
     filename = file.split("/")[-1].split(".")[0]
     dumb_mres = []
     dumb_stds = []
@@ -20,8 +21,8 @@ for file in files:
         dumb_stds.append(np.std(dict_results[file][fraction]['dumb']['mres'])*100)
         random_mres.append(np.mean(dict_results[file][fraction]['random-progressive']['mres'])*100)
         random_stds.append(np.std(dict_results[file][fraction]['random-progressive']['mres'])*100)
-        dumb_evals.append(np.std(dict_results[file][fraction]['dumb']['train_set_size']))
-        random_evals.append(np.std(dict_results[file][fraction]['random-progressive']['train_set_size']))
+        dumb_evals.append(np.mean(dict_results[file][fraction]['dumb']['train_set_size']))
+        random_evals.append(np.mean(dict_results[file][fraction]['random-progressive']['train_set_size']))
 
     left, width = .53, .5
     bottom, height = .25, .5

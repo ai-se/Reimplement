@@ -156,7 +156,8 @@ def find_mre(train, test):
 
 if __name__ == "__main__":
     datafolder = "./Data/"
-    files = [datafolder + f for f in listdir(datafolder)]
+    # files = [datafolder + f for f in listdir(datafolder)]
+    files = ["./Data/wc+wc-3d-c4-obj2.csv", "./Data/SQL_AllMeasurements.csv", "./Data/sol-6d-c2-obj1.csv"]
     fractions = [0.1 * i for i in xrange(1, 8)]
     results = {}
     for file in files:
@@ -192,6 +193,7 @@ if __name__ == "__main__":
                 mre = find_mre(sub_train_set_rank, test_set)
                 results[file][fraction]["random-progressive"]["mres"].append(mre)
                 results[file][fraction]["random-progressive"]["train_set_size"].append(len(sub_train_set_rank))
+                print len(sub_train_set_rank),
             print
     import pickle
     pickle.dump(results, open('mre_results.p', 'w'))
