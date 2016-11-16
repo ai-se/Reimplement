@@ -1,0 +1,176 @@
+>>>> 0 lrzip.csv FAILED
+>>>>  0.2 lrzip.csv 56 432
+>>>>  0.3 lrzip.csv 53 432
+>>>>  0.4 lrzip.csv 49 432
+>>>>  0.5 lrzip.csv 167 432
+>>>>  0.6 lrzip.csv 182 432
+>>>>  0.7 lrzip.csv 164 432
+>>>> 0 Apache.csv FAILED
+>>>>  0.2 Apache.csv 20 192
+>>>>  0.3 Apache.csv 40 192
+>>>>  0.4 Apache.csv 49 192
+>>>>  0.5 Apache.csv 51 192
+>>>>  0.6 Apache.csv 51 192
+>>>>  0.7 Apache.csv 55 192
+>>>> 0 BDBC.csv FAILED
+>>>>  0.2 BDBC.csv 127 2560
+>>>>  0.3 BDBC.csv 180 2560
+>>>>  0.4 BDBC.csv 186 2560
+>>>>  0.5 BDBC.csv 992 2560
+>>>>  0.6 BDBC.csv 855 2560
+>>>>  0.7 BDBC.csv 820 2560
+>>>> 0 Dune.csv FAILED
+>>>>  0.2 Dune.csv 128 2304
+>>>>  0.3 Dune.csv 120 2304
+>>>>  0.4 Dune.csv 117 2304
+>>>>  0.5 Dune.csv 437 2304
+>>>>  0.6 Dune.csv 108 2304
+>>>>  0.7 Dune.csv 108 2304
+>>>> 0 HSMGP.csv FAILED
+>>>>  0.2 HSMGP.csv 361 3456
+>>>>  0.3 HSMGP.csv 353 3456
+>>>>  0.4 HSMGP.csv 383 3456
+>>>>  0.5 HSMGP.csv 366 3456
+>>>>  0.6 HSMGP.csv 393 3456
+>>>>  0.7 HSMGP.csv 380 3456
+>>>> 0 rs-6d-c3_obj1.csv FAILED
+>>>>  0.2 rs-6d-c3_obj1.csv 726 3840
+>>>>  0.3 rs-6d-c3_obj1.csv 759 3840
+>>>>  0.4 rs-6d-c3_obj1.csv 678 3840
+>>>>  0.5 rs-6d-c3_obj1.csv 594 3840
+>>>>  0.6 rs-6d-c3_obj1.csv 565 3840
+>>>>  0.7 rs-6d-c3_obj1.csv 451 3840
+>>>> 0 rs-6d-c3_obj2.csv FAILED
+>>>>  0.2 rs-6d-c3_obj2.csv 461 3840
+>>>>  0.3 rs-6d-c3_obj2.csv 535 3840
+>>>>  0.4 rs-6d-c3_obj2.csv 835 3840
+>>>>  0.5 rs-6d-c3_obj2.csv 464 3840
+>>>>  0.6 rs-6d-c3_obj2.csv 552 3840
+>>>>  0.7 rs-6d-c3_obj2.csv 556 3840
+>>>> 0 sol-6d-c2-obj1.csv FAILED
+>>>>  0.2 sol-6d-c2-obj1.csv 168 2866
+>>>>  0.3 sol-6d-c2-obj1.csv 156 2866
+>>>>  0.4 sol-6d-c2-obj1.csv 188 2866
+>>>>  0.5 sol-6d-c2-obj1.csv 197 2866
+>>>>  0.6 sol-6d-c2-obj1.csv 204 2866
+>>>>  0.7 sol-6d-c2-obj1.csv 112 2866
+>>>> 0 sol-6d-c2-obj2.csv FAILED
+>>>>  0.2 sol-6d-c2-obj2.csv 239 2862
+>>>>  0.3 sol-6d-c2-obj2.csv 244 2862
+>>>>  0.4 sol-6d-c2-obj2.csv 251 2862
+>>>>  0.5 sol-6d-c2-obj2.csv 236 2862
+>>>>  0.6 sol-6d-c2-obj2.csv 276 2862
+>>>>  0.7 sol-6d-c2-obj2.csv 246 2862
+>>>> 0 sort_256_obj2.csv FAILED
+>>>>  0.2 sort_256_obj2.csv 21 206
+>>>>  0.3 sort_256_obj2.csv 41 206
+>>>>  0.4 sort_256_obj2.csv 4 206
+>>>>  0.5 sort_256_obj2.csv 39 206
+>>>>  0.6 sort_256_obj2.csv 46 206
+>>>>  0.7 sort_256_obj2.csv 47 206
+>>>> 0 SQL.csv FAILED
+>>>>  0.2 SQL.csv 79 4653
+>>>>  0.3 SQL.csv 66 4653
+>>>>  0.4 SQL.csv 66 4653
+>>>>  0.5 SQL.csv 70 4653
+>>>>  0.6 SQL.csv 68 4653
+>>>>  0.7 SQL.csv 68 4653
+>>>> 0 wc+rs-3d-c4-obj1.csv FAILED
+>>>>  0.2 wc+rs-3d-c4-obj1.csv 29 196
+>>>>  0.3 wc+rs-3d-c4-obj1.csv 28 196
+>>>>  0.4 wc+rs-3d-c4-obj1.csv 28 196
+>>>>  0.5 wc+rs-3d-c4-obj1.csv 72 196
+>>>>  0.6 wc+rs-3d-c4-obj1.csv 76 196
+>>>>  0.7 wc+rs-3d-c4-obj1.csv 72 196
+>>>> 0 wc+rs-3d-c4-obj2.csv FAILED
+>>>>  0.2 wc+rs-3d-c4-obj2.csv 26 196
+>>>>  0.3 wc+rs-3d-c4-obj2.csv 29 196
+>>>>  0.4 wc+rs-3d-c4-obj2.csv 45 196
+>>>>  0.5 wc+rs-3d-c4-obj2.csv 97 196
+>>>>  0.6 wc+rs-3d-c4-obj2.csv 38 196
+>>>>  0.7 wc+rs-3d-c4-obj2.csv 27 196
+>>>> 0 wc+sol-3d-c4-obj1.csv FAILED
+>>>>  0.2 wc+sol-3d-c4-obj1.csv 27 196
+>>>>  0.3 wc+sol-3d-c4-obj1.csv 29 196
+>>>>  0.4 wc+sol-3d-c4-obj1.csv 28 196
+>>>>  0.5 wc+sol-3d-c4-obj1.csv 94 196
+>>>>  0.6 wc+sol-3d-c4-obj1.csv 70 196
+>>>>  0.7 wc+sol-3d-c4-obj1.csv 79 196
+>>>> 0 wc+sol-3d-c4-obj2.csv FAILED
+>>>> 0.2 wc+sol-3d-c4-obj2.csv FAILED
+>>>>  0.3 wc+sol-3d-c4-obj2.csv 50 196
+>>>>  0.4 wc+sol-3d-c4-obj2.csv 56 196
+>>>>  0.5 wc+sol-3d-c4-obj2.csv 27 196
+>>>>  0.6 wc+sol-3d-c4-obj2.csv 30 196
+>>>>  0.7 wc+sol-3d-c4-obj2.csv 36 196
+>>>> 0 wc+wc-3d-c4-obj1.csv FAILED
+>>>>  0.2 wc+wc-3d-c4-obj1.csv 27 196
+>>>>  0.3 wc+wc-3d-c4-obj1.csv 29 196
+>>>>  0.4 wc+wc-3d-c4-obj1.csv 27 196
+>>>>  0.5 wc+wc-3d-c4-obj1.csv 37 196
+>>>>  0.6 wc+wc-3d-c4-obj1.csv 73 196
+>>>>  0.7 wc+wc-3d-c4-obj1.csv 78 196
+>>>> 0 wc+wc-3d-c4-obj2.csv FAILED
+>>>>  0.2 wc+wc-3d-c4-obj2.csv 18 196
+>>>>  0.3 wc+wc-3d-c4-obj2.csv 39 196
+>>>> 0.4 wc+wc-3d-c4-obj2.csv FAILED
+>>>>  0.5 wc+wc-3d-c4-obj2.csv 29 196
+>>>>  0.6 wc+wc-3d-c4-obj2.csv 103 196
+>>>>  0.7 wc+wc-3d-c4-obj2.csv 40 196
+>>>> 0 wc-3d-c4_obj2.csv FAILED
+>>>>  0.2 wc-3d-c4_obj2.csv 110 756
+>>>>  0.3 wc-3d-c4_obj2.csv 56 756
+>>>>  0.4 wc-3d-c4_obj2.csv 59 756
+>>>>  0.5 wc-3d-c4_obj2.csv 103 756
+>>>>  0.6 wc-3d-c4_obj2.csv 75 756
+>>>>  0.7 wc-3d-c4_obj2.csv 60 756
+>>>> 0 wc-6d-c1-obj1.csv FAILED
+>>>>  0.2 wc-6d-c1-obj1.csv 338 2880
+>>>>  0.3 wc-6d-c1-obj1.csv 314 2880
+>>>>  0.4 wc-6d-c1-obj1.csv 361 2880
+>>>>  0.5 wc-6d-c1-obj1.csv 717 2880
+>>>>  0.6 wc-6d-c1-obj1.csv 365 2880
+>>>>  0.7 wc-6d-c1-obj1.csv 333 2880
+>>>> 0 wc-6d-c1-obj2.csv FAILED
+>>>>  0.2 wc-6d-c1-obj2.csv 185 2880
+>>>>  0.3 wc-6d-c1-obj2.csv 167 2880
+>>>>  0.4 wc-6d-c1-obj2.csv 125 2880
+>>>>  0.5 wc-6d-c1-obj2.csv 135 2880
+>>>>  0.6 wc-6d-c1-obj2.csv 88 2880
+>>>>  0.7 wc-6d-c1-obj2.csv 159 2880
+>>>> 0 WGet.csv FAILED
+>>>>  0.2 WGet.csv 14 188
+>>>>  0.3 WGet.csv 23 188
+>>>>  0.4 WGet.csv 23 188
+>>>>  0.5 WGet.csv 39 188
+>>>>  0.6 WGet.csv 34 188
+>>>>  0.7 WGet.csv 44 188
+>>>> 0 X264_AllMeasurements.csv FAILED
+>>>>  0.2 X264_AllMeasurements.csv 158 1152
+>>>>  0.3 X264_AllMeasurements.csv 154 1152
+>>>>  0.4 X264_AllMeasurements.csv 151 1152
+>>>>  0.5 X264_AllMeasurements.csv 164 1152
+>>>>  0.6 X264_AllMeasurements.csv 160 1152
+>>>>  0.7 X264_AllMeasurements.csv 149 1152
+>>>> 0.1 lrzip.csv FAILED
+>>>>  0.1 Apache.csv 18 192
+>>>>  0.1 BDBC.csv 184 2560
+>>>>  0.1 Dune.csv 164 2304
+>>>>  0.1 HSMGP.csv 335 3456
+>>>> 0.1 rs-6d-c3_obj1.csv FAILED
+>>>> 0.1 rs-6d-c3_obj2.csv FAILED
+>>>>  0.1 sol-6d-c2-obj1.csv 98 2866
+>>>>  0.1 sol-6d-c2-obj2.csv 257 2862
+>>>>  0.1 sort_256_obj2.csv 18 206
+>>>>  0.1 SQL.csv 66 4653
+>>>> 0.1 wc+rs-3d-c4-obj1.csv FAILED
+>>>> 0.1 wc+rs-3d-c4-obj2.csv FAILED
+>>>> 0.1 wc+sol-3d-c4-obj1.csv FAILED
+>>>> 0.1 wc+sol-3d-c4-obj2.csv FAILED
+>>>> 0.1 wc+wc-3d-c4-obj1.csv FAILED
+>>>> 0.1 wc+wc-3d-c4-obj2.csv FAILED
+>>>> 0.1 wc-3d-c4_obj2.csv FAILED
+>>>>  0.1 wc-6d-c1-obj1.csv 277 2880
+>>>>  0.1 wc-6d-c1-obj2.csv 122 2880
+>>>> 0.1 WGet.csv FAILED
+>>>>  0.1 X264_AllMeasurements.csv 48 1152
