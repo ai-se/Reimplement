@@ -80,13 +80,17 @@ def draw_fig(data):
 
     plt.plot([-5, 215], [5, 5], 'k-', lw=2)
 
-    plt.bar(y_pos[:3], performance[:3], align='center', alpha=0.5, width=8, color='green')
-    plt.bar(y_pos[3:13], performance[3:13], align='center', alpha=0.5, width=8, color='yellow')
-    plt.bar(y_pos[13:], performance[13:], align='center', alpha=0.5, width=8, color='red')
+    plt.bar(y_pos[:3], performance[:3], align='center', alpha=0.5, width=8, color='green', label='< 5%', hatch='o')
+    plt.bar(y_pos[3:13], performance[3:13], align='center', alpha=0.5, width=8, color='yellow', label='5% < x < 10%', hatch='O')
+    plt.bar(y_pos[13:], performance[13:], align='center', alpha=0.5, width=8, color='red', label='>10%', hatch='.')
     plt.xticks(y_pos, projects, rotation='vertical')
     plt.yscale('log')
     plt.xlim(-15, 225)
     plt.ylabel('MMRE')
+
+    # Now add the legend with some customizations.
+    plt.legend(loc='upper center', bbox_to_anchor=(0.5, 1.1), ncol=3, fancybox=True, frameon=False)
+
     plt.savefig('figure1.eps')
 
 if __name__ == "__main__":
