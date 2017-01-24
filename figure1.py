@@ -83,8 +83,8 @@ def draw_fig(data):
 
     plt.plot([-5, 215], [5, 5], 'k-', lw=2)
 
-    plt.bar(y_pos[:3], performance[:3], align='center', alpha=0.5, width=8, color='green', label='< 5%', hatch='o')
-    plt.bar(y_pos[3:13], performance[3:13], align='center', alpha=0.5, width=8, color='yellow', label='5% < x < 10%', hatch='O')
+    plt.bar(y_pos[:4], performance[:4], align='center', alpha=0.5, width=8, color='green', label='< 5%', hatch='o')
+    plt.bar(y_pos[4:13], performance[4:13], align='center', alpha=0.5, width=8, color='yellow', label='5% < x < 10%', hatch='O')
     plt.bar(y_pos[13:], performance[13:], align='center', alpha=0.5, width=8, color='red', label='>10%', hatch='.')
     plt.xticks(y_pos, projects, rotation='vertical')
     plt.yscale('log')
