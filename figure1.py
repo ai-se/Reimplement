@@ -60,15 +60,18 @@ def mre_progressive(train, test):
     for org, pred in zip(test_dependent, predicted):
         if org != 0:
             mre.append(abs(org - pred)/ abs(org))
-    return np.mean(mre)
+    return round(np.mean(mre)* 100, 2)
 
 
 def get_data():
     files = [data_folder + file for file in listdir(data_folder)]
     result = []
     for file in files:
-        train, test = split_data(file)
-        result.append([file, round(mre_progressive(train, test) * 100, 2), len(train) + len(test)])
+        mres = []
+        for _ in xrange(20):
+            train, test = split_data(file)
+            mres.append(mre_progressive(train, test))
+        result.append([file, [np.mean(mres), np.std(mres)], len(train) + len(test)])
     return result
 
 def draw_fig(data):
@@ -76,7 +79,7 @@ def draw_fig(data):
     data = sorted(data, key=lambda x: x[1])
     projects = ["SS"+str(i+1) for i,d in enumerate(data)]
     y_pos = [i*10 for i in np.arange(len(projects))]
-    performance = [d[1] for d in data]
+    performance = [d[1][0] for d in data]
 
     plt.plot([-5, 215], [5, 5], 'k-', lw=2)
 
@@ -93,11 +96,30 @@ def draw_fig(data):
 
     plt.savefig('figure1.eps')
 
-if __name__ == "__main__":
-    # data = get_data()
+
+def gather_data():
+    data = get_data()
+    for d in data: print d  # debug
+    import pdb
+    pdb.set_trace()
     import pickle
-    # pickle.dump(data, open('fig1.p', 'w'))
+    pickle.dump(data, open('fig1.p', 'w'))
+    print "Done"
+
+
+def draw_figure():
+    import pickle
     data = pickle.load(open('fig1.p', 'r'))
     draw_fig(data)
-    # import pdb
-    # pdb.set_trace()
+
+def misc():
+    import pickle
+    data = pickle.load(open('fig1.p', 'r'))
+    data = sorted(data, key=lambda x:x[1][0])
+    import pdb
+    pdb.set_trace()
+
+if __name__ == "__main__":
+    # gather_data()
+    draw_figure()
+    # misc()
