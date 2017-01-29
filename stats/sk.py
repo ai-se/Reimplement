@@ -453,13 +453,13 @@ For examples on using this code, see _rdivDemo_ (below).
 """
 
 
-def scottknott(data, cohen=0.3, small=3, useA12=False, epsilon=0.01):
+def scottknott(data, cohen=0.35, small=3, useA12=False, epsilon=0.01):
   """Recursively split data, maximizing delta of
   the expected value of the mean before and
   after the splits.
   Reject splits with under 3 items"""
   all = reduce(lambda x, y: x + y, data)
-  same = lambda l, r: abs(l.median() - r.median()) <= all.s() * cohen
+  same = lambda l, r: abs(l.median() - r.median()) <= all.sl() * cohen
   if useA12:
     same = lambda l, r: not different(l.all, r.all)
   big = lambda n: n > small
@@ -549,7 +549,7 @@ Driver for the demos:
 """
 
 
-def rdivDemo(data, isLatex=False, globalMinMax=True, high=1, low=0, lessismore=False):
+def rdivDemo(raw_data, isLatex=False, globalMinMax=True, high=1, low=0):
   if isLatex:
     #     print(r"""\documentclass{article}
     #     \usepackage{colortbl} % not sure if needed
@@ -560,153 +560,76 @@ def rdivDemo(data, isLatex=False, globalMinMax=True, high=1, low=0, lessismore=F
     # {\color{black}\put(#3,3){\circle*{4}}\put(#1,3){\line(1,0){#2}}}\end{picture}}
     #     \begin{document}
     #     """)
-    if lessismore:
-        def z(x):
-          return int(80 * (x - lo) / (hi - lo + 0.00001))
-        data = map(lambda lst: Num(lst[0], lst[1:]),
-                   data)
-        print ""
-        ranks = []
-        for x in scottknott(data, useA12=True):
-          ranks += [(x.rank, x.median(), x)]
-        all = []
-        for _, __, x in sorted(ranks):
-          all += x.quartiles()
-        all = sorted(all)
-        if globalMinMax:
-          lo, hi = min(low, all[0]), max(all[-1], high)
-        else:
-          lo, hi = all[0], all[-1]
-        print r'{\scriptsize \begin{tabular}{l@{~~~}l@{~~~}r@{~~~}r@{~~~}c}'
-        print r'\arrayrulecolor{lightgray}'
-        # min= %s, max= %s\\\\' % (int(lo),int(hi))
-        print r'\textbf{Rank} & \textbf{Treatment} & \textbf{Median} & \textbf{IQR} & \\\hline'
-        last = None
-        max_rank = max([r[-1].rank for r in ranks])
-        for _, __, x in sorted(ranks, reverse=True, key=lambda x: x[2].rank):
-          q1, q2, q3 = x.quartiles()
-          pre = ""
-          if not last is None and not last == x.rank:
-            pre = "\\hline"
-          print pre, r'%2s & %12s &    %s  &  %s & \quart{%s}{%s}{%s}{%s} \\' % \
-              (max_rank - x.rank + 1,
-               x.name,
-               float(q2 / 100),
-                  float((q3 - q1) / 100),
-                  z(q1),
-                  z(q3) - z(q1),
-                  z(q2),
-                  z(100))
-          last = x.rank
-        print r"\hline \end{tabular}}"
-        return ranks
+    def z(x):
+      return int(80 * (x - lo) / (hi - lo + 0.00001))
+    data = map(lambda lst: Num(lst[0], lst[1:]),
+               raw_data)
+    print ""
+    ranks = []
+    for x in scottknott(data, useA12=True):
+      ranks += [(x.rank, x.median(), x)]
+    all = []
+    for _, __, x in sorted(ranks):
+      all += x.quartiles()
+    all = sorted(all)
+    if globalMinMax:
+      lo, hi = min(low, all[0]), max(all[-1], high)
     else:
-
-          def z(x):
-              return int(80 * (x - lo) / (hi - lo + 0.00001))
-
-          data = map(lambda lst: Num(lst[0], lst[1:]),
-                     data)
-          print ""
-          ranks = []
-          for x in scottknott(data, useA12=True):
-              ranks += [(x.rank, x.median(), x)]
-          all = []
-          for _, __, x in sorted(ranks):
-              all += x.quartiles()
-          all = sorted(all)
-          if globalMinMax:
-              lo, hi = min(low, all[0]), max(all[-1], high)
-          else:
-              lo, hi = all[0], all[-1]
-          print r'{\scriptsize \begin{tabular}{l@{~~~}l@{~~~}r@{~~~}r@{~~~}c}'
-          print r'\arrayrulecolor{lightgray}'
-          # min= %s, max= %s\\\\' % (int(lo),int(hi))
-          print r'\textbf{Rank} & \textbf{Treatment} & \textbf{Median} & \textbf{IQR} & \\\hline'
-          last = None
-          max_rank = max([r[-1].rank for r in ranks])
-          for _, __, x in sorted(ranks, reverse=True, key=lambda x: x[2].rank):
-              q1, q2, q3 = x.quartiles()
-              pre = ""
-              if not last is None and not last == x.rank:
-                  pre = "\\hline"
-              print pre, r'%2s & %12s &    %s  &  %s & \quart{%s}{%s}{%s}{%s} \\' % \
-                         (max_rank - x.rank + 1,
-                          x.name,
-                          float(q2 / 100),
-                          float((q3 - q1) / 100),
-                          z(q1),
-                          z(q3) - z(q1),
-                          z(q2),
-                          z(100))
-              last = x.rank
-          print r"\hline \end{tabular}}"
-          return ranks
-
+      lo, hi = all[0], all[-1]
+    print r'{\scriptsize \begin{tabular}{l@{~~~}l@{~~~}r@{~~~}r@{~~~}c}'
+    print r'\arrayrulecolor{lightgray}'
+    # min= %s, max= %s\\\\' % (int(lo),int(hi))
+    print r'\textbf{Rank} & \textbf{Treatment} & \textbf{Median} & \textbf{IQR} & \\\hline'
+    last = None
+    for _, __, x in sorted(ranks):
+      q1, q2, q3 = x.quartiles()
+      pre = ""
+      if not last is None and not last == x.rank:
+        pre = "\\hline"
+      print pre, r'%2s & %12s &    %s  &  %s & \quart{%s}{%s}{%s}{%s} \\' % \
+          (x.rank + 1,
+           x.name,
+           float(q2 / 100),
+              float((q3 - q1) / 100),
+              z(q1),
+              z(q3) - z(q1),
+              z(q2),
+              z(100))
+      last = x.rank
+    print r"\hline \end{tabular}}"
+    return ranks
+#     print('''
+#     \end{document}
+#     ''')
   else:
-    if lessismore is False:
-      def z(x):
-        return int(100 * (x - lo) / (hi - lo + 0.00001))
-      data = map(lambda lst: Num(lst[0], lst[1:]),
-                 data)
-      print ""
-      ranks = []
-      for x in scottknott(data, useA12=True):
-        ranks += [(x.rank, x.median(), x)]
-      all = []
-      for _, __, x in sorted(ranks):
-        all += x.all
-      all = sorted(all)
-
-      if globalMinMax:
-        lo, hi = min(low, all[0]), max(all[-1], high)
-      else:
-        lo, hi = all[0], all[-1]
-      line = "----------------------------------------------------"
-      last = None
-      print ('%4s , %16s ,    %4s   , %4s ' %
-             ('rank', 'name', 'med', 'iqr')) + "\n" + line
-
-      max_rank = max([r[-1].rank for r in ranks])
-      # print lo, hi
-      for _, __, x in sorted(ranks, reverse=True, key=lambda x: x[2].rank):
-        q1, q2, q3 = x.quartiles()
-        print ('%4s , %16s ,    %0.2f  ,  %0.2f ' %
-               (max_rank - x.rank + 1, x.name, x.median(), x.spread())) + \
-            xtile(x.all, lo=lo, hi=hi, width=30)
-        last = x.rank
-      return ranks
-
+    def z(x):
+      return int(100 * (x - lo) / (hi - lo + 0.00001))
+    data = map(lambda lst: Num(lst[0], lst[1:]),
+               raw_data)
+    print ""
+    ranks = []
+    for x in scottknott(data, useA12=True):
+      ranks += [(x.rank, x.median(), x)]
+    all = []
+    for _, __, x in sorted(ranks):
+      all += x.all
+    all = sorted(all)
+    if globalMinMax:
+      lo, hi = min(low, all[0]), max(all[-1], high)
     else:
-      def z(x):
-        return int(100 * (x - lo) / (hi - lo + 0.00001))
-
-      data = map(lambda lst: Num(lst[0], lst[1:]),
-                 data)
-      print ""
-      ranks = []
-      for x in scottknott(data, useA12=True):
-        ranks += [(x.rank, x.median(), x)]
-      all = []
-      for _, __, x in sorted(ranks):
-        all += x.all
-      all = sorted(all)
-
-      if globalMinMax:
-        lo, hi = min(low, all[0]), max(all[-1], high)
-      else:
-        lo, hi = all[0], all[-1]
-      line = "----------------------------------------------------"
-      last = None
-      print ('%4s , %16s ,    %4s   , %4s ' %
-             ('rank', 'name', 'med', 'iqr')) + "\n" + line
-
-      max_rank = max([r[-1].rank for r in ranks])
-      # print lo, hi
-      for _, __, x in sorted(ranks):
-        q1, q2, q3 = x.quartiles()
-        print ('%4s , %16s ,    %0.2f  ,  %0.2f ' %
-               (x.rank + 1, x.name, x.median(), x.spread())) + \
-              xtile(x.all, lo=lo, hi=hi, width=30)
-        last = x.rank
-      return ranks
+      lo, hi = all[0], all[-1]
+    line = "----------------------------------------------------"
+    last = None
+    print ('%4s , %12s ,    %s   , %4s ' %
+           ('rank', 'name', 'med', 'iqr')) + "\n" + line
+    temp = {}
+    for _, __, x in sorted(ranks):
+      q1, q2, q3 = x.quartiles()
+      # temp[x.name] = x.rank
+      print ('%4s , %12s ,    %0.2f  ,  %0.2f ' %
+             (x.rank + 1, x.name, x.median(), x.spread())) + \
+          xtile(x.all, lo=lo, hi=hi, width=30)
+      last = x.rank
+    # print temp['rank-baseds'], temp['random-progressive'], temp['sarkar-projective']
+    for d in raw_data: print d
+    return ranks

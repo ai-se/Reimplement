@@ -2,10 +2,10 @@ from sk import rdivDemo
 import pickle
 
 names = {
-    "atri_train_set": "sarkar-projective",
+    "atri_train_set": "projective",
     "rank_train_set": "dumb",
-    "mmre_train_set": "random-progressive",
-    'rank_min_rank' : "dumb",
+    "mmre_train_set": "progressive",
+    'rank_min_rank' : "rank-baseds",
     'atri_min_rank' : "sarkar-projective",
     'mmre_min_rank' : "random-progressive",
 }
@@ -36,25 +36,29 @@ data_sizes = {
 }
 
 dict_result = pickle.load(open("final.p", "r"))
-files = dict_result.keys()
+files = sorted(dict_result.keys())
+
+temp_list = ["BDBC_AllMeasurements", "SQL_AllMeasurements", "rs-6d-c3_obj1", "wc-6d-c1-obj2", "X264_AllMeasurements" ]
 
 for file in files:
+    # if file not in temp_list: continue
     results = dict_result[file].keys()
     # only train_set
     train_set_keys = [r for r in results if "train_set" in r]
     rank_keys = [r for r in results if "min_rank" in r]
     lists = []
-    print "##", file, "(", data_sizes[file], ")"
-    print "### Training Set Size"
-    print "```"
-    for train_set_key in train_set_keys:
-        lists.append([names[train_set_key]] + dict_result[file][train_set_key])
-    rdivDemo(lists, lessismore=True)
-    print "```"
-    print " ### Minimum Rank Found"
-    print "```"
+    # print "##", file, "(", data_sizes[file], ")"
+    # print "### Training Set Size"
+    # print "```"
+    # for train_set_key in train_set_keys:
+    #     lists.append([names[train_set_key]] + dict_result[file][train_set_key])
+    # rdivDemo(lists, lessismore=True)
+    print file, data_sizes[file],
+    # print "```"
+    # print " ### Minimum Rank Found"
+    # print "```"
     lists = []
     for rank_key in rank_keys:
         lists.append([names[rank_key]] + dict_result[file][rank_key])
-    rdivDemo(lists, globalMinMax=False, lessismore=True)
-    print "```"
+    rdivDemo(lists, globalMinMax=False, isLatex=True)
+    # print "```"

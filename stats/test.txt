@@ -1,0 +1,176 @@
+Apache_AllMeasurements 192 
+{\scriptsize \begin{tabular}{l@{~~~}l@{~~~}r@{~~~}r@{~~~}c}
+\arrayrulecolor{lightgray}
+\textbf{Rank} & \textbf{Treatment} & \textbf{Median} & \textbf{IQR} & \\\hline
+  1 &  rank-baseds &    0.0  &  0.0 & \quart{0}{0}{0}{79} \\
+  1 & sarkar-projective &    0.0  &  1.0 & \quart{0}{79}{0}{79} \\
+  1 & random-progressive &    0.0  &  1.0 & \quart{0}{79}{0}{79} \\
+\hline \end{tabular}}
+BDBC_AllMeasurements 2561 
+{\scriptsize \begin{tabular}{l@{~~~}l@{~~~}r@{~~~}r@{~~~}c}
+\arrayrulecolor{lightgray}
+\textbf{Rank} & \textbf{Treatment} & \textbf{Median} & \textbf{IQR} & \\\hline
+  1 & sarkar-projective &    0.0  &  1.0 & \quart{0}{4}{0}{4} \\
+\hline  2 &  rank-baseds &    1.0  &  6.0 & \quart{0}{25}{4}{4} \\
+  2 & random-progressive &    2.0  &  18.0 & \quart{4}{75}{8}{4} \\
+\hline \end{tabular}}
+Dune 2305 
+{\scriptsize \begin{tabular}{l@{~~~}l@{~~~}r@{~~~}r@{~~~}c}
+\arrayrulecolor{lightgray}
+\textbf{Rank} & \textbf{Treatment} & \textbf{Median} & \textbf{IQR} & \\\hline
+  1 & random-progressive &    1.0  &  2.0 & \quart{0}{11}{5}{5} \\
+  1 & sarkar-projective &    2.0  &  9.0 & \quart{5}{52}{11}{5} \\
+  1 &  rank-baseds &    4.0  &  13.0 & \quart{5}{74}{22}{5} \\
+\hline \end{tabular}}
+HSMGP_num 3457 
+{\scriptsize \begin{tabular}{l@{~~~}l@{~~~}r@{~~~}r@{~~~}c}
+\arrayrulecolor{lightgray}
+\textbf{Rank} & \textbf{Treatment} & \textbf{Median} & \textbf{IQR} & \\\hline
+  1 & sarkar-projective &    0.0  &  1.0 & \quart{0}{19}{0}{19} \\
+  1 & random-progressive &    1.0  &  2.0 & \quart{0}{39}{19}{19} \\
+  1 &  rank-baseds &    1.0  &  4.0 & \quart{0}{79}{19}{19} \\
+\hline \end{tabular}}
+SQL_AllMeasurements 4654 
+{\scriptsize \begin{tabular}{l@{~~~}l@{~~~}r@{~~~}r@{~~~}c}
+\arrayrulecolor{lightgray}
+\textbf{Rank} & \textbf{Treatment} & \textbf{Median} & \textbf{IQR} & \\\hline
+  1 & random-progressive &    10.0  &  17.0 & \quart{0}{9}{5}{0} \\
+\hline  2 & sarkar-projective &    15.0  &  139.0 & \quart{0}{79}{8}{0} \\
+  2 &  rank-baseds &    21.0  &  40.0 & \quart{1}{23}{11}{0} \\
+\hline \end{tabular}}
+WGet 189 
+{\scriptsize \begin{tabular}{l@{~~~}l@{~~~}r@{~~~}r@{~~~}c}
+\arrayrulecolor{lightgray}
+\textbf{Rank} & \textbf{Treatment} & \textbf{Median} & \textbf{IQR} & \\\hline
+  1 & sarkar-projective &    1.0  &  4.0 & \quart{0}{79}{19}{19} \\
+  1 & random-progressive &    1.0  &  3.0 & \quart{0}{59}{19}{19} \\
+  1 &  rank-baseds &    2.0  &  4.0 & \quart{0}{79}{39}{19} \\
+\hline \end{tabular}}
+X264_AllMeasurements 1153 
+{\scriptsize \begin{tabular}{l@{~~~}l@{~~~}r@{~~~}r@{~~~}c}
+\arrayrulecolor{lightgray}
+\textbf{Rank} & \textbf{Treatment} & \textbf{Median} & \textbf{IQR} & \\\hline
+  1 & sarkar-projective &    0.0  &  0.0 & \quart{0}{0}{0}{9} \\
+  1 & random-progressive &    0.0  &  1.0 & \quart{0}{9}{0}{9} \\
+\hline  2 &  rank-baseds &    2.0  &  8.0 & \quart{0}{79}{19}{9} \\
+\hline \end{tabular}}
+lrzip 433 
+{\scriptsize \begin{tabular}{l@{~~~}l@{~~~}r@{~~~}r@{~~~}c}
+\arrayrulecolor{lightgray}
+\textbf{Rank} & \textbf{Treatment} & \textbf{Median} & \textbf{IQR} & \\\hline
+  1 &  rank-baseds &    0.0  &  0.0 & \quart{0}{0}{0}{799999999} \\
+  1 & sarkar-projective &    0.0  &  0.0 & \quart{0}{0}{0}{799999999} \\
+  1 & random-progressive &    0.0  &  0.0 & \quart{0}{0}{0}{799999999} \\
+\hline \end{tabular}}
+rs-6d-c3_obj1 3840 
+{\scriptsize \begin{tabular}{l@{~~~}l@{~~~}r@{~~~}r@{~~~}c}
+\arrayrulecolor{lightgray}
+\textbf{Rank} & \textbf{Treatment} & \textbf{Median} & \textbf{IQR} & \\\hline
+  1 & sarkar-projective &    0.0  &  1.0 & \quart{0}{3}{0}{3} \\
+  1 & random-progressive &    0.0  &  0.0 & \quart{0}{0}{0}{3} \\
+\hline  2 &  rank-baseds &    3.0  &  24.0 & \quart{0}{79}{9}{3} \\
+\hline \end{tabular}}
+rs-6d-c3_obj2 3840 
+{\scriptsize \begin{tabular}{l@{~~~}l@{~~~}r@{~~~}r@{~~~}c}
+\arrayrulecolor{lightgray}
+\textbf{Rank} & \textbf{Treatment} & \textbf{Median} & \textbf{IQR} & \\\hline
+  1 &  rank-baseds &    0.0  &  8.0 & \quart{0}{79}{0}{9} \\
+  1 & sarkar-projective &    1.0  &  3.0 & \quart{0}{29}{9}{9} \\
+  1 & random-progressive &    1.0  &  2.0 & \quart{0}{19}{9}{9} \\
+\hline \end{tabular}}
+sol-6d-c2-obj1 2866 
+{\scriptsize \begin{tabular}{l@{~~~}l@{~~~}r@{~~~}r@{~~~}c}
+\arrayrulecolor{lightgray}
+\textbf{Rank} & \textbf{Treatment} & \textbf{Median} & \textbf{IQR} & \\\hline
+  1 & sarkar-projective &    3.0  &  12.0 & \quart{0}{79}{13}{0} \\
+  1 & random-progressive &    3.0  &  4.0 & \quart{6}{27}{13}{0} \\
+  1 &  rank-baseds &    4.0  &  6.0 & \quart{6}{40}{19}{0} \\
+\hline \end{tabular}}
+sol-6d-c2-obj2 2862 
+{\scriptsize \begin{tabular}{l@{~~~}l@{~~~}r@{~~~}r@{~~~}c}
+\arrayrulecolor{lightgray}
+\textbf{Rank} & \textbf{Treatment} & \textbf{Median} & \textbf{IQR} & \\\hline
+  1 & sarkar-projective &    0.0  &  1.0 & \quart{0}{3}{0}{3} \\
+  1 & random-progressive &    0.0  &  1.0 & \quart{0}{3}{0}{3} \\
+\hline  2 &  rank-baseds &    5.0  &  19.0 & \quart{3}{76}{19}{3} \\
+\hline \end{tabular}}
+sort_256_obj2 206 
+{\scriptsize \begin{tabular}{l@{~~~}l@{~~~}r@{~~~}r@{~~~}c}
+\arrayrulecolor{lightgray}
+\textbf{Rank} & \textbf{Treatment} & \textbf{Median} & \textbf{IQR} & \\\hline
+  1 &  rank-baseds &    0.0  &  0.0 & \quart{0}{0}{0}{799999999} \\
+  1 & sarkar-projective &    0.0  &  0.0 & \quart{0}{0}{0}{799999999} \\
+  1 & random-progressive &    0.0  &  0.0 & \quart{0}{0}{0}{799999999} \\
+\hline \end{tabular}}
+wc+rs-3d-c4-obj1 196 
+{\scriptsize \begin{tabular}{l@{~~~}l@{~~~}r@{~~~}r@{~~~}c}
+\arrayrulecolor{lightgray}
+\textbf{Rank} & \textbf{Treatment} & \textbf{Median} & \textbf{IQR} & \\\hline
+  1 &  rank-baseds &    0.0  &  0.0 & \quart{0}{0}{0}{799999999} \\
+  1 & sarkar-projective &    0.0  &  0.0 & \quart{0}{0}{0}{799999999} \\
+  1 & random-progressive &    0.0  &  0.0 & \quart{0}{0}{0}{799999999} \\
+\hline \end{tabular}}
+wc+rs-3d-c4-obj2 196 
+{\scriptsize \begin{tabular}{l@{~~~}l@{~~~}r@{~~~}r@{~~~}c}
+\arrayrulecolor{lightgray}
+\textbf{Rank} & \textbf{Treatment} & \textbf{Median} & \textbf{IQR} & \\\hline
+  1 &  rank-baseds &    0.0  &  0.0 & \quart{0}{0}{0}{799999999} \\
+  1 & sarkar-projective &    0.0  &  0.0 & \quart{0}{0}{0}{799999999} \\
+  1 & random-progressive &    0.0  &  0.0 & \quart{0}{0}{0}{799999999} \\
+\hline \end{tabular}}
+wc+sol-3d-c4-obj1 196 
+{\scriptsize \begin{tabular}{l@{~~~}l@{~~~}r@{~~~}r@{~~~}c}
+\arrayrulecolor{lightgray}
+\textbf{Rank} & \textbf{Treatment} & \textbf{Median} & \textbf{IQR} & \\\hline
+  1 &  rank-baseds &    0.0  &  0.0 & \quart{0}{0}{0}{799999999} \\
+  1 & sarkar-projective &    0.0  &  0.0 & \quart{0}{0}{0}{799999999} \\
+  1 & random-progressive &    0.0  &  0.0 & \quart{0}{0}{0}{799999999} \\
+\hline \end{tabular}}
+wc+sol-3d-c4-obj2 196 
+{\scriptsize \begin{tabular}{l@{~~~}l@{~~~}r@{~~~}r@{~~~}c}
+\arrayrulecolor{lightgray}
+\textbf{Rank} & \textbf{Treatment} & \textbf{Median} & \textbf{IQR} & \\\hline
+  1 &  rank-baseds &    0.0  &  1.0 & \quart{0}{79}{0}{79} \\
+  1 & sarkar-projective &    0.0  &  0.0 & \quart{0}{0}{0}{79} \\
+  1 & random-progressive &    0.0  &  0.0 & \quart{0}{0}{0}{79} \\
+\hline \end{tabular}}
+wc+wc-3d-c4-obj1 196 
+{\scriptsize \begin{tabular}{l@{~~~}l@{~~~}r@{~~~}r@{~~~}c}
+\arrayrulecolor{lightgray}
+\textbf{Rank} & \textbf{Treatment} & \textbf{Median} & \textbf{IQR} & \\\hline
+  1 &  rank-baseds &    0.0  &  1.0 & \quart{0}{79}{0}{79} \\
+  1 & sarkar-projective &    0.0  &  0.0 & \quart{0}{0}{0}{79} \\
+  1 & random-progressive &    0.0  &  0.0 & \quart{0}{0}{0}{79} \\
+\hline \end{tabular}}
+wc+wc-3d-c4-obj2 196 
+{\scriptsize \begin{tabular}{l@{~~~}l@{~~~}r@{~~~}r@{~~~}c}
+\arrayrulecolor{lightgray}
+\textbf{Rank} & \textbf{Treatment} & \textbf{Median} & \textbf{IQR} & \\\hline
+  1 &  rank-baseds &    0.0  &  0.0 & \quart{0}{0}{0}{799999999} \\
+  1 & sarkar-projective &    0.0  &  0.0 & \quart{0}{0}{0}{799999999} \\
+  1 & random-progressive &    0.0  &  0.0 & \quart{0}{0}{0}{799999999} \\
+\hline \end{tabular}}
+wc-3d-c4_obj2 756 
+{\scriptsize \begin{tabular}{l@{~~~}l@{~~~}r@{~~~}r@{~~~}c}
+\arrayrulecolor{lightgray}
+\textbf{Rank} & \textbf{Treatment} & \textbf{Median} & \textbf{IQR} & \\\hline
+  1 &  rank-baseds &    0.0  &  0.0 & \quart{0}{0}{0}{79} \\
+  1 & sarkar-projective &    0.0  &  0.0 & \quart{0}{0}{0}{79} \\
+  1 & random-progressive &    0.0  &  1.0 & \quart{0}{79}{0}{79} \\
+\hline \end{tabular}}
+wc-6d-c1-obj1 2880 
+{\scriptsize \begin{tabular}{l@{~~~}l@{~~~}r@{~~~}r@{~~~}c}
+\arrayrulecolor{lightgray}
+\textbf{Rank} & \textbf{Treatment} & \textbf{Median} & \textbf{IQR} & \\\hline
+  1 & sarkar-projective &    0.0  &  1.0 & \quart{0}{15}{0}{15} \\
+  1 & random-progressive &    0.0  &  1.0 & \quart{0}{15}{0}{15} \\
+  1 &  rank-baseds &    2.0  &  5.0 & \quart{0}{79}{31}{15} \\
+\hline \end{tabular}}
+wc-6d-c1-obj2 2880 
+{\scriptsize \begin{tabular}{l@{~~~}l@{~~~}r@{~~~}r@{~~~}c}
+\arrayrulecolor{lightgray}
+\textbf{Rank} & \textbf{Treatment} & \textbf{Median} & \textbf{IQR} & \\\hline
+  1 & random-progressive &    0.0  &  1.0 & \quart{0}{26}{0}{26} \\
+\hline  2 &  rank-baseds &    1.0  &  3.0 & \quart{0}{79}{26}{26} \\
+  2 & sarkar-projective &    1.0  &  2.0 & \quart{0}{53}{26}{26} \\
+\hline \end{tabular}}

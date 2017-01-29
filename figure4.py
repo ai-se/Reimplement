@@ -62,9 +62,10 @@ ax3.set_xlabel("Accuracy")
 
 from matplotlib.lines import Line2D
 
-circ1 = Line2D([0], [0], linestyle="none", marker="v", alpha=0.4, markersize=10, markerfacecolor="green")
-circ2 = Line2D([0], [0], linestyle="none", marker="o", alpha=0.3, markersize=10, markerfacecolor="yellow")
-circ3 = Line2D([0], [0], linestyle="none", marker="x", alpha=0.4, markersize=10, markerfacecolor="red")
+circ3 = Line2D([0], [0], linestyle="none", marker="x", alpha=0.3, markersize=10, color="r")
+circ1 = Line2D([0], [0], linestyle="none", marker="v", alpha=0.4, markersize=10, color="g")
+circ2 = Line2D([0], [0], linestyle="none", marker="o", alpha=0.3, markersize=10, color="y")
+
 
 
 plt.figlegend((circ1, circ2, circ3), ('<5%', '5%<x<10%', '>10%'), frameon=False, loc='lower center',
