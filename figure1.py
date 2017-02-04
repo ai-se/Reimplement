@@ -82,12 +82,13 @@ def draw_fig(data):
     performance = [d[1][0] for d in data]
 
     plt.plot([-5, 215], [5, 5], 'k-', lw=2)
-
-    plt.bar(y_pos[:4], performance[:4], align='center', alpha=0.5, width=8, color='green', label='< 5%', hatch='o')
-    plt.bar(y_pos[4:13], performance[4:13], align='center', alpha=0.5, width=8, color='yellow', label='5% < x < 10%', hatch='O')
-    plt.bar(y_pos[13:], performance[13:], align='center', alpha=0.5, width=8, color='red', label='>10%', hatch='.')
+    print performance[:4]
+    plt.bar(y_pos[:4], performance[:4], align='center', alpha=0.5, width=8, color='green', label='< 5%', hatch='o', log=True)
+    plt.bar(y_pos[4:13], performance[4:13], align='center', alpha=0.5, width=8, color='yellow', label='5% < MMRE < 10%', hatch='O', log=True)
+    plt.bar(y_pos[13:], performance[13:], align='center', alpha=0.5, width=8, color='red', label='>10%', hatch='.', log=True)
     plt.xticks(y_pos, projects, rotation='vertical')
-    plt.yscale('log')
+    # plt.yscale('log')
+    plt.ylim(0.1, 100)
     plt.xlim(-15, 225)
     plt.ylabel('MMRE')
 

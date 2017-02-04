@@ -41,7 +41,7 @@ ind = np.arange(space, space*(len(data)+1), space)  # the x locations for the gr
 width = 1.5        # the width of the bars
 
 fig, ax = plt.subplots()
-rects1 = ax.bar(ind, dumb_mres, width, color='#f0f0f0', log=True, label='Rank based Approach')
+rects1 = ax.bar(ind, dumb_mres, width, color='#f0f0f0', log=True, label='Rank-based')
 
 random_mres = [d[4] for d in data]
 random_stds = [d[5] for d in data]

@@ -9,7 +9,7 @@ data = [["./Data/Apache_AllMeasurements.csv",0,0,0,7.17],
         ["./Data/rs-6d-c3_obj2.csv",7.5,1,1,9.01],
         ["./Data/sol-6d-c2-obj1.csv",2,3.5,2.5,38.08],
         ["./Data/sol-6d-c2-obj2.csv",1,0,0,76.52],
-        ["./Data/sort_256_obj2.csv",0,0,0,6.79],
+        #["./Data/sort_256_obj2.csv",0,0,0,6.79],
         ["./Data/SQL_AllMeasurements.csv",5.5,7.5,12.5,4.41],
         ["./Data/wc-3d-c4_obj2.csv",0,0,0,44.45],
         ["./Data/wc-6d-c1-obj1.csv",0,0,0,7.44],
@@ -37,9 +37,10 @@ ax1.scatter([d[-1] for d in data if d[-1] > 10], [d[1] for d in data if d [-1] >
 
 
 ax1.set_ylim(-2,14)
-ax1.set_title('Rank based Approch')
+ax1.set_title('Rank-based')
 ax1.set_ylabel("Rank Difference (RD)")
-ax1.set_xlabel("Accuracy")
+ax1.set_xticks([])
+# ax1.set_xlabel("Accuracy")
 # ax1.set_yscale('log')
 
 ax2.set_ylim(-2,14)
@@ -73,4 +74,4 @@ plt.figlegend((circ1, circ2, circ3), ('<5%', '5%<x<10%', '>10%'), frameon=False,
 
 f.set_size_inches(14, 5)
 # plt.show()
-plt.savefig('figure4.eps', bbox_inches='tight')
+plt.savefig('figure4.png', bbox_inches='tight')

@@ -38,7 +38,7 @@ ind = np.arange(space, space*(len(data)+1), space)  # the x locations for the gr
 width = 1.5        # the width of the bars
 
 fig, ax = plt.subplots()
-rects1 = ax.bar(ind, dumb_evals, width, color='#f0f0f0', log=True, label='Rank based Approach')
+rects1 = ax.bar(ind, dumb_evals, width, color='#f0f0f0', log=True, label='Rank-based')
 
 random_evals = [d[6] for d in data]
 rects2 = ax.bar(ind + 1 * width, random_evals, width, color='#bdbdbd', log=True, label='Progessive Sampling')
