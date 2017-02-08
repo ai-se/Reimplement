@@ -5,7 +5,7 @@ names = {
     "atri_train_set": "projective",
     "rank_train_set": "dumb",
     "mmre_train_set": "progressive",
-    'rank_min_rank' : "rank-baseds",
+    'rank_min_rank' : "Rank-baseds",
     'atri_min_rank' : "sarkar-projective",
     'mmre_min_rank' : "random-progressive",
 }

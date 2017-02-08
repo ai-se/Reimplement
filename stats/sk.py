@@ -549,7 +549,7 @@ Driver for the demos:
 """
 
 
-def rdivDemo(raw_data, isLatex=False, globalMinMax=True, high=1, low=0):
+def rdivDemo(name, raw_data, isLatex=False, globalMinMax=True, high=1, low=0):
   if isLatex:
     #     print(r"""\documentclass{article}
     #     \usepackage{colortbl} % not sure if needed
@@ -577,24 +577,23 @@ def rdivDemo(raw_data, isLatex=False, globalMinMax=True, high=1, low=0):
     else:
       lo, hi = all[0], all[-1]
     print r'{\scriptsize \begin{tabular}{l@{~~~}l@{~~~}r@{~~~}r@{~~~}c}'
-    print r'\arrayrulecolor{lightgray}'
+    print r'\rowcolor{lightgray}\arrayrulecolor{lightgray}'
     # min= %s, max= %s\\\\' % (int(lo),int(hi))
-    print r'\textbf{Rank} & \textbf{Treatment} & \textbf{Median} & \textbf{IQR} & \\\hline'
+    print r'\textbf{%s} & \textbf{} & \textbf{} & \textbf{} & \\\hline' % name
     last = None
     for _, __, x in sorted(ranks):
       q1, q2, q3 = x.quartiles()
       pre = ""
       if not last is None and not last == x.rank:
         pre = "\\hline"
-      print pre, r'%2s & %12s &    %s  &  %s & \quart{%s}{%s}{%s}{%s} \\' % \
+      print pre, r'%2s & %12s &    %s  &  %s & \quart{%s}{%s}{%s} \\' % \
           (x.rank + 1,
            x.name,
            float(q2 / 100),
               float((q3 - q1) / 100),
               z(q1),
               z(q3) - z(q1),
-              z(q2),
-              z(100))
+              z(q2))
       last = x.rank
     print r"\hline \end{tabular}}"
     return ranks

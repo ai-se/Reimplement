@@ -83,9 +83,9 @@ if __name__ == "__main__":
     y_axis = [m[1] for m in mres]
     plt.plot(x_axis, y_axis, color='r')
 
-    plt.xlabel('Size of Training Set')
-    plt.ylabel('Accuracy')
+    plt.xlabel('Size of Training Set (# count)')
+    plt.ylabel('Accuracy (%)')
     # plt.title('About as simple as it gets, folks')
     # plt.grid(True)
     plt.savefig("figure3.png")
-    # plt.show()
+    plt.show()

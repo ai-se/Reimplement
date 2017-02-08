@@ -91,11 +91,12 @@ def draw_fig(data):
     plt.ylim(0.1, 100)
     plt.xlim(-15, 225)
     plt.ylabel('MMRE')
+    plt.xlabel('Software Systems')
 
     # Now add the legend with some customizations.
     plt.legend(loc='upper center', bbox_to_anchor=(0.5, 1.1), ncol=3, fancybox=True, frameon=False)
 
-    plt.savefig('figure1.eps')
+    plt.savefig('figure1.eps', bbox_inches='tight')
 
 
 def gather_data():

@@ -158,7 +158,8 @@ if __name__ == "__main__":
     datafolder = "./Data/"
     files = [datafolder + f for f in listdir(datafolder)]
     # files = ["./Data/wc+wc-3d-c4-obj2.csv", "./Data/SQL_AllMeasurements.csv", "./Data/sol-6d-c2-obj1.csv"]
-    fractions = [0.1 * i for i in xrange(1, 8)]
+    # fractions = [0.1 * i for i in xrange(1, 8)]
+    fractions = [0.4]
     results = {}
     for file in files:
         print file
@@ -203,7 +204,7 @@ if __name__ == "__main__":
             print
 
     import pickle
-    pickle.dump(results, open('mre_results_rank.p', 'w'))
+    pickle.dump(results, open('mre_results_rank_lives3.p', 'w'))
 
 
 
