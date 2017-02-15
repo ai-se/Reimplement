@@ -65,11 +65,11 @@ def average_score(result):
     import matplotlib.pyplot as plt
 
     plt.plot(xaxis, yaxis, color='r', marker='o')
-    plt.annotate('lives='+str(2), (20, 0.75), fontsize=10)
-    plt.annotate('lives='+str(3), (29, 0.50), fontsize=10)
-    plt.annotate('lives='+str(4), (70, 0.021), fontsize=10)
-    plt.annotate('lives='+str(5), (150, 0.021), fontsize=10)
-    plt.annotate('lives='+str(10), (360, 0.021), fontsize=10)
+    plt.annotate('lives='+str(2), (21, 0.75), fontsize=12)
+    plt.annotate('lives='+str(3), (32, 0.50), fontsize=12)
+    plt.annotate('lives='+str(4), (70, 0.021), fontsize=12)
+    plt.annotate('lives='+str(5), (150, 0.021), fontsize=12)
+    plt.annotate('lives='+str(10), (350, 0.021), fontsize=12)
 
     plt.xlabel('Number of Measurements (# counts)')
     plt.ylabel('Median Minimum Rank Found')

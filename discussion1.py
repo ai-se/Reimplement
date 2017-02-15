@@ -161,7 +161,7 @@ def draw_fig():
 
     import matplotlib.pyplot as plt
     plt.plot(x, y, c='r')
-    plt.xlabel("Size of the training set")
+    plt.xlabel("Size of the Training Set")
     plt.ylabel("Pearsson's Correlation")
     # plt.title("Apac")
     plt.savefig('figure7.eps')

@@ -76,7 +76,7 @@ def draw_fig(result):
     for i in xrange(3):
         for j in xrange(7):
             for cnt, txt in enumerate([1, 2, 3,4 ,5 , 10]):
-                ax[i][j].annotate(str(txt), (ret_min_rank(result[name_mapping['SS' + str(count)]])[cnt], ret_min_eval(result[name_mapping['SS' + str(count)]])[cnt]), fontsize=10)
+                ax[i][j].annotate(str(txt), (ret_min_rank(result[name_mapping['SS' + str(count)]])[cnt], ret_min_eval(result[name_mapping['SS' + str(count)]])[cnt]), fontsize=13)
             ax[i][j].set_title('SS' + str(count), fontsize=10)
 
 
