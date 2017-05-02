@@ -269,31 +269,36 @@ def draw_bar_chart(result):
     # plt.show()
     plt.savefig('rebuttal_merge.png', bbox_inches='tight')
 
+def calculate_factor():
+    list1 = [33.0, 39.5, 20.0, 26.5, 37.5, 29.0, 27.0, 23.5, 30.5, 27.0, 28.0, 34.5, 18.0, 23.0, 26.0, 36.5, 23.0, 19.5, 24.0, 28.5, 20.5]
+    list2 = [75.5, 129.5, 67.5, 58.5, 78.5, 84.0, 106.5, 56.0, 82.0, 77.0, 113.5, 85.0, 54.5, 32.0, 44.5, 70.5, 49.5, 36.5, 45.0, 97.5, 34.0]
+    factors = []
+    for i,j in zip(list1, list2):
+        factors.append(j/i)
+    print np.mean(factors), np.median(factors)
+
 
 if __name__ == "__main__":
-    global dict_store
-    from natsort import natsorted
-    # name_dict = {}
-    # sort_data = sorted(data, key=lambda x:x[-1])
-    # for i, d in enumerate(sort_data):
-    #     name_dict['SS' + str(i+1)] = d[0]
-    # print name_dict
-    files = [f for f in os.listdir(".") if ".py" not in f]
-    files = [ 'mre_results_rank_lives2.p', 'mre_results_rank_lives3.p', 'mre_results_rank_lives4.p', 'mre_results_rank_lives5.p', 'mre_results_rank_lives10.p',]
-    for file in files:
-        print
-        print file
-        run(file)
+    # global dict_store
+    # from natsort import natsorted
+    # # name_dict = {}
+    # # sort_data = sorted(data, key=lambda x:x[-1])
+    # # for i, d in enumerate(sort_data):
+    # #     name_dict['SS' + str(i+1)] = d[0]
+    # # print name_dict
+    # files = [f for f in os.listdir(".") if ".py" not in f]
+    # files = [ 'mre_results_rank_lives2.p', 'mre_results_rank_lives3.p', 'mre_results_rank_lives4.p', 'mre_results_rank_lives5.p', 'mre_results_rank_lives10.p',]
+    # for file in files:
+    #     print
+    #     print file
+    #     run(file)
+    #
+    # keys = natsorted(name_mapping.keys())
+    # for key in keys:
+    #     print key, dict_store[name_mapping[key]]
+    #
+    # # draw_bar_chart_rank_diff(dict_store)
+    # # draw_bar_chart_evals(dict_store)
+    # draw_bar_chart(dict_store)
 
-    keys = natsorted(name_mapping.keys())
-    for key in keys:
-        print key, dict_store[name_mapping[key]]
-
-    # draw_bar_chart_rank_diff(dict_store)
-    # draw_bar_chart_evals(dict_store)
-    draw_bar_chart(dict_store)
-    # draw_fig(dict_store)
-
-
-    # import pdb
-    # pdb.set_trace()
+    calculate_factor()
