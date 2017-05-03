@@ -58,9 +58,16 @@ ax1.scatter([gap*(i+1) for i in xrange(13, 21)], data[13:], color='r', marker='x
 ax1.tick_params(axis=u'both', which=u'both',length=0)
 ax1.set_ylim(-2,16)
 ax1.set_xlim(10, 770)
-ax1.set_title('Rank-based')
+ax1.set_title('Rank-based  - Finding worst performing configuration')
 ax1.set_ylabel("Rank Difference (RD)")
 plt.sca(ax1)
 plt.xticks([gap*(i+1) for i in xrange(0, 21)], names, rotation=90)
 
-plt.savefig('rebuttal_worst_performance.png')
+from matplotlib.lines import Line2D
+circ3 = Line2D([0], [0], linestyle="none", marker="x", alpha=0.3, markersize=10, color="r")
+circ1 = Line2D([0], [0], linestyle="none", marker="v", alpha=0.4, markersize=10, color="g")
+circ2 = Line2D([0], [0], linestyle="none", marker="o", alpha=0.3, markersize=10, color="y")
+plt.figlegend((circ1, circ2, circ3), ('<5%', '5%<MMRE<10%', '>10%'), frameon=False, loc='lower center',
+              bbox_to_anchor=(0.5, -0.036),fancybox=True, ncol=3)
+f.set_size_inches(8, 5.5)
+plt.savefig('rebuttal_worst_performance.png', bbox_inches='tight')
