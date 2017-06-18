@@ -1,4 +1,4 @@
-# Code used for the paper "Using Bad Learners to find Good Configurations".
+### Code used for the paper "Using Bad Learners to find Good Configurations".
 
 ./Data/ -> Contains the Data used in the paper.
 
@@ -10,7 +10,7 @@ rank_based_sampling.py -> Run Rank-based Method
 
 atri_results.txt -> Contains all the results after running [author's code](https://github.com/atrisarkar/ASE_extn) for projective sampling
 
-# How to run
+### How to run
 - First execute all the methods
 ```
 python rank_based_sampling.py
