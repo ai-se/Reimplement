@@ -1,9 +1,13 @@
 # Code used for the paper "Using Bad Learners to find Good Configurations".
 
 ./Data/ -> Contains the Data used in the paper.
+
 progressive_sampling.py -> Run Progressive Sampling
+
 projective_sampling.py -> Run Projective Sampling
+
 rank_based_sampling.py -> Run Rank-based Method
+
 atri_results.txt -> Contains all the results after running [author's code](https://github.com/atrisarkar/ASE_extn) for projective sampling
 
 # How to run
