@@ -1,0 +1,1 @@
+This folder contains all the scripts used to generate figures for the paper.
