@@ -4,6 +4,9 @@ import pandas as pd
 import numpy as np
 from random import shuffle
 from sklearn.tree import DecisionTreeRegressor
+import matplotlib
+matplotlib.rcParams['pdf.fonttype'] = 42
+matplotlib.rcParams['ps.fonttype'] = 42
 import matplotlib.lines as lines
 from matplotlib.lines import Line2D
 
@@ -83,9 +86,9 @@ def draw_fig(data):
 
     plt.plot([-5, 215], [5, 5], 'k-', lw=2)
     print performance[:4]
-    plt.bar(y_pos[:4], performance[:4], align='center', alpha=0.5, width=8, color='green', label='< 5%', hatch='o', log=True)
+    plt.bar(y_pos[:4], performance[:4], align='center', alpha=0.5, width=8, color='#228B22', label='< 5%', hatch='////', log=True)
     plt.bar(y_pos[4:13], performance[4:13], align='center', alpha=0.5, width=8, color='yellow', label='5% < MMRE < 10%', hatch='O', log=True)
-    plt.bar(y_pos[13:], performance[13:], align='center', alpha=0.5, width=8, color='red', label='>10%', hatch='.', log=True)
+    plt.bar(y_pos[13:], performance[13:], align='center', alpha=0.5, width=8, color='#800000', label='>10%', hatch='xx', log=True)
     plt.xticks(y_pos, projects, rotation='vertical')
     # plt.yscale('log')
     plt.ylim(0.1, 100)

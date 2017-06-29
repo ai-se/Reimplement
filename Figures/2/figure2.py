@@ -4,6 +4,9 @@ from sklearn.tree import DecisionTreeRegressor
 from os import listdir
 import pandas as pd
 from random import shuffle
+import matplotlib
+matplotlib.rcParams['pdf.fonttype'] = 42
+matplotlib.rcParams['ps.fonttype'] = 42
 
 data_folder = "./Data/"
 
@@ -70,7 +73,7 @@ class solution_holder:
 
 
 if __name__ == "__main__":
-    filename = "./Data/Apache_AllMeasurements.csv"
+    filename = "./Apache_AllMeasurements.csv"
     data = split_data(filename)
     mres = []
     for i in xrange(1, len(data[0])):
@@ -87,5 +90,5 @@ if __name__ == "__main__":
     plt.ylabel('Accuracy (%)')
     # plt.title('About as simple as it gets, folks')
     # plt.grid(True)
-    plt.savefig("figure3.png")
+    plt.savefig("figure2.eps", )
     plt.show()

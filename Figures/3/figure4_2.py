@@ -40,9 +40,9 @@ f, ((ax1, ax2, ax3)) = plt.subplots(1, 3)
 print ">> ", len([d[2] for d in data if 5 < d [-1] <= 10.5]), len([5*(i+1) for i in xrange(4, 13)])
 
 # for dumb learner
-ax1.scatter([gap*(i+1) for i in xrange(0, 4)], [d[2] for d in data if d [-1] <= 5], color='g', marker='v', s=34)
+ax1.scatter([gap*(i+1) for i in xrange(0, 4)], [d[2] for d in data if d [-1] <= 5], color='#228B22', marker='v', s=34)
 ax1.scatter([gap*(i+1) for i in xrange(4, 13)], [d[2] for d in data if 5 < d [-1] <= 10.5], color='y', marker='o', s=34)
-ax1.scatter([gap*(i+1) for i in xrange(13, 21)], [d[2] for d in data if d [-1] > 10.5], color='r', marker='x', s=34)
+ax1.scatter([gap*(i+1) for i in xrange(13, 21)], [d[2] for d in data if d [-1] > 10.5], color='#800000', marker='x', s=34)
 
 ax1.tick_params(axis=u'both', which=u'both',length=0)
 ax1.set_ylim(-2,14)
@@ -55,9 +55,9 @@ ax1.set_ylabel("Rank Difference (RD)", fontsize=16)
 
 ax2.set_ylim(-2,14)
 ax2.set_xlim(10, 770)
-ax2.scatter([gap*(i+1) for i in xrange(0, 4)], [d[3] for d in data if d [-1] <= 5], marker='v', color='g', s=34)
+ax2.scatter([gap*(i+1) for i in xrange(0, 4)], [d[3] for d in data if d [-1] <= 5], marker='v', color='#228B22', s=34)
 ax2.scatter([gap*(i+1) for i in xrange(4, 13)], [d[3] for d in data if 5 < d [-1] <= 10.5], marker='o', color='y', s=34)
-ax2.scatter([gap*(i+1) for i in xrange(13, 21)], [d[3] for d in data if d [-1] > 10.5], marker='x', color='r', s=34)
+ax2.scatter([gap*(i+1) for i in xrange(13, 21)], [d[3] for d in data if d [-1] > 10.5], marker='x', color='#800000', s=34)
 
 ax2.tick_params(axis=u'both', which=u'both',length=0)
 ax2.set_title('Progressive Sampling', fontsize=16)
@@ -66,9 +66,9 @@ ax2.set_ylabel("Rank Difference (RD)", fontsize=16)
 
 ax3.set_ylim(-2,14)
 ax3.set_xlim(10, 770)
-ax3.scatter([gap*(i+1) for i in xrange(0, 4)], [d[4] for d in data if d [-1] <= 5], marker='v', color='g', s=34)
+ax3.scatter([gap*(i+1) for i in xrange(0, 4)], [d[4] for d in data if d [-1] <= 5], marker='v', color='#228B22', s=34)
 ax3.scatter([gap*(i+1) for i in xrange(4, 13)], [d[4] for d in data if 5 < d[-1] <= 10.5], marker='o', color='y', s=34)
-ax3.scatter([gap*(i+1) for i in xrange(13, 21)], [d[4] for d in data if d [-1] > 10.5 and d[4]!= -1], marker='x', color='r', s=34)
+ax3.scatter([gap*(i+1) for i in xrange(13, 21)], [d[4] for d in data if d [-1] > 10.5 and d[4]!= -1], marker='x', color='#800000', s=34)
 
 ax3.tick_params(axis=u'both', which=u'both',length=0)
 ax3.set_title('Projective Sampling', fontsize=16)
@@ -77,9 +77,9 @@ ax3.set_ylabel("Rank Difference (RD)", fontsize=16)
 
 from matplotlib.lines import Line2D
 
-circ3 = Line2D([0], [0], linestyle="none", marker="x", alpha=0.3, markersize=10, color="r")
-circ1 = Line2D([0], [0], linestyle="none", marker="v", alpha=0.4, markersize=10, color="g")
-circ2 = Line2D([0], [0], linestyle="none", marker="o", alpha=0.3, markersize=10, color="y")
+circ3 = Line2D([0], [0], linestyle="None", marker="x", markersize=10, color="#800000")
+circ1 = Line2D([0], [0], linestyle="None", marker="v", markersize=10, color="#228B22")
+circ2 = Line2D([0], [0], linestyle="None", marker="o", markersize=10, color="y")
 
 plt.sca(ax1)
 plt.xticks([gap*(i+1) for i in xrange(0, 21)], [d[0] for d in data], rotation=90, fontsize=12)

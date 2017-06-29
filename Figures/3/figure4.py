@@ -63,9 +63,9 @@ ax3.set_xlabel("Accuracy")
 
 from matplotlib.lines import Line2D
 
-circ3 = Line2D([0], [0], linestyle="none", marker="x", alpha=0.3, markersize=10, color="r")
-circ1 = Line2D([0], [0], linestyle="none", marker="v", alpha=0.4, markersize=10, color="g")
-circ2 = Line2D([0], [0], linestyle="none", marker="o", alpha=0.3, markersize=10, color="y")
+circ3 = Line2D([0], [0], linestyle="none", marker="x", markersize=10, color="r")
+circ1 = Line2D([0], [0], linestyle="none", marker="v", markersize=10, color="g")
+circ2 = Line2D([0], [0], linestyle="none", marker="o", markersize=10, color="y")
 
 
 
